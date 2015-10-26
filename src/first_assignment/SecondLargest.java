@@ -16,8 +16,8 @@ import java.util.Scanner;
 public class SecondLargest {
 	private Map<Integer, List<Integer>> tree;
 	private File file;
-	private String INPUT_FILE = "C:\\Users\\Parley\\workspace\\Algorithms\\src\\first_assignment\\data.txt";
-	private String OUTPUT_FILE = "C:\\Users\\Parley\\workspace\\Algorithms\\src\\first_assignment\\output.txt";
+	private String INPUT_FILE = "C:\\Users\\Parley\\Documents\\GitHub\\csc310\\src\\first_assignment\\data.txt";
+	private String OUTPUT_FILE = "C:\\Users\\Parley\\Documents\\GitHub\\csc310\\src\\first_assignment\\output.txt";
 	/*
 	 * I chose to use Integer (the class) instead of int just to keep a pattern,
 	 * since I have to use it in the HashMap.
