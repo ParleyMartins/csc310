@@ -10,8 +10,17 @@ import java.util.Scanner;
 public class Sort {
 
 	private static PrintWriter out;
+
 	private int quickList[];
+	private int quickKeyComp;
+	private int quickKeyMoves;
+	private float quickTime;
+
+	private int mergeKeyComp;
+	private int mergeKeyMoves;
+	private float mergeTime;
 	private int mergeList[];
+
 	private final int originalList[];
 
 	public Sort(int list[]) {
@@ -36,11 +45,12 @@ public class Sort {
 			while (in.hasNextInt()) {
 				int[] list = getLine(in);
 				Sort sortAlgorithms = new Sort(list);
-				sortAlgorithms.mergeSort();
 				out.print("Running MergeSort on list: ");
 				sortAlgorithms.printList(list);
-				out.println("Finished sort:");
+				sortAlgorithms.mergeSort();
+				out.print("Finished sort: ");
 				sortAlgorithms.printList(sortAlgorithms.getMergeList());
+				sortAlgorithms.printMergeStatics();
 			}
 			in.close();
 			out.close();
@@ -63,6 +73,9 @@ public class Sort {
 	}
 
 	public void mergeSort() {
+		mergeKeyComp = 0;
+		mergeKeyMoves = 0;
+		mergeTime = 0;
 		mergeList = mergeSort(originalList);
 	}
 
@@ -95,6 +108,8 @@ public class Sort {
 				mergedList[mergedIt] = secondHalf[secondIt];
 				secondIt++;
 			}
+			mergeKeyComp++;
+			mergeKeyMoves++;
 			mergedIt++;
 		}
 		int smallestIt = 0;
@@ -113,6 +128,7 @@ public class Sort {
 			mergedList[mergedIt] = unfinishedList[smallestIt];
 			smallestIt++;
 			mergedIt++;
+			mergeKeyMoves++;
 		}
 		return mergedList;
 	}
@@ -127,13 +143,17 @@ public class Sort {
 				int temp = list[i + 1];
 				list[i + 1] = list[i];
 				list[i] = temp;
+				mergeKeyMoves += 3;
 			}
+			mergeKeyComp++;
 		}
 		if (list.length > 1 && list[0] > list[1]) {
 			int temp = list[0];
 			list[0] = list[1];
 			list[1] = temp;
+			mergeKeyMoves += 3;
 		}
+		mergeKeyComp++;
 		return list;
 	}
 
@@ -142,13 +162,24 @@ public class Sort {
 		for (int i = 0; i < list.length; i++) {
 			out.print(list[i] + " ");
 		}
-		out.print("] ");
-		out.println();
+		out.println("] ");
 	}
 
-	// private int[] baseCase(int[] list, int one, int two, int three){
-	// return list;
-	// }
+	public void printMergeStatics() {
+		out.println("mergeSort: ");
+		printStatics(mergeKeyComp, mergeKeyMoves, mergeTime);
+	}
+
+	public void printQuickStatics() {
+		out.println("quickSort: ");
+		printStatics(quickKeyComp, quickKeyMoves, quickTime);
+	}
+
+	private void printStatics(int keyComp, int keyMoves, float time) {
+		out.println("\t key comparisons: " + keyComp);
+		out.println("\t key movements: " + keyMoves);
+		out.println("\t time: " + time + "\n");
+	}
 
 	public int[] getQuickList() {
 		return quickList;
