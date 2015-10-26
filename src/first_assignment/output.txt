@@ -1,0 +1,336 @@
+============================
+1 2 3 4 
+Finding largest ...
+Comparison: 1 to 2 Winner: 1
+Comparison: 3 to 4 Winner: 3
+Comparison: 2 to 4 Winner: 2
+
+Finding 2nd largest ...
+Comparison: 3 to 2 Winner: 3
+
+Winner is: 4
+2nd place: 3
+Results:
+2 won against [1] 
+4 won against [3, 2] 
+============================
+============================
+9 2 1 7 5 10 6 4 
+Finding largest ...
+Comparison: 9 to 2 Winner: 9
+Comparison: 1 to 7 Winner: 1
+Comparison: 5 to 10 Winner: 5
+Comparison: 6 to 4 Winner: 6
+Comparison: 9 to 7 Winner: 9
+Comparison: 10 to 6 Winner: 10
+Comparison: 9 to 10 Winner: 9
+
+Finding 2nd largest ...
+Comparison: 5 to 6 Winner: 6
+Comparison: 6 to 9 Winner: 9
+
+Winner is: 10
+2nd place: 9
+Results:
+6 won against [4] 
+7 won against [1] 
+9 won against [2, 7] 
+10 won against [5, 6, 9] 
+============================
+============================
+4 2 3 19 12 
+Finding largest ...
+Comparison: 4 to 2 Winner: 4
+Comparison: 3 to 19 Winner: 3
+Comparison: 12 to 12 Winner: 12
+Comparison: 4 to 19 Winner: 4
+Comparison: 12 to 12 Winner: 12
+Comparison: 19 to 12 Winner: 19
+
+Finding 2nd largest ...
+Comparison: 3 to 4 Winner: 4
+Comparison: 4 to 12 Winner: 12
+
+Winner is: 19
+2nd place: 12
+Results:
+19 won against [3, 4, 12] 
+4 won against [2] 
+============================
+============================
+10 9 8 7 6 5 4 3 2 1 
+Finding largest ...
+Comparison: 10 to 9 Winner: 10
+Comparison: 8 to 7 Winner: 8
+Comparison: 6 to 5 Winner: 6
+Comparison: 4 to 3 Winner: 4
+Comparison: 2 to 1 Winner: 2
+Comparison: 10 to 8 Winner: 10
+Comparison: 6 to 4 Winner: 6
+Comparison: 2 to 2 Winner: 2
+Comparison: 10 to 6 Winner: 10
+Comparison: 2 to 2 Winner: 2
+Comparison: 10 to 2 Winner: 10
+
+Finding 2nd largest ...
+Comparison: 9 to 8 Winner: 9
+Comparison: 9 to 6 Winner: 9
+Comparison: 9 to 2 Winner: 9
+
+Winner is: 10
+2nd place: 9
+Results:
+2 won against [1] 
+4 won against [3] 
+6 won against [5, 4] 
+8 won against [7] 
+10 won against [9, 8, 6, 2] 
+============================
+============================
+73 72 75 77 79 71 74 78 -76 70 83 82 85 87 -89 81 84 88 -86 80 32 35 37 39 31 34 38 -36 30 33 173 62 65 67 69 61 64 68 -66 60 23 -22 -25 -27 29 21 24 28 -26 20 13 12 10 17 -19 11 14 18 16 15 43 42 45 47 49 41 44 48 -46 40 103 -12 -75 107 109 171 179 -178 -176 170 93 92 95 97 99 91 94 98 -96 3 5 6 8 1 2 -1 -3 -2 111 
+Finding largest ...
+Comparison: 73 to 72 Winner: 73
+Comparison: 75 to 77 Winner: 75
+Comparison: 79 to 71 Winner: 79
+Comparison: 74 to 78 Winner: 74
+Comparison: -76 to 70 Winner: -76
+Comparison: 83 to 82 Winner: 83
+Comparison: 85 to 87 Winner: 85
+Comparison: -89 to 81 Winner: -89
+Comparison: 84 to 88 Winner: 84
+Comparison: -86 to 80 Winner: -86
+Comparison: 32 to 35 Winner: 32
+Comparison: 37 to 39 Winner: 37
+Comparison: 31 to 34 Winner: 31
+Comparison: 38 to -36 Winner: 38
+Comparison: 30 to 33 Winner: 30
+Comparison: 173 to 62 Winner: 173
+Comparison: 65 to 67 Winner: 65
+Comparison: 69 to 61 Winner: 69
+Comparison: 64 to 68 Winner: 64
+Comparison: -66 to 60 Winner: -66
+Comparison: 23 to -22 Winner: 23
+Comparison: -25 to -27 Winner: -25
+Comparison: 29 to 21 Winner: 29
+Comparison: 24 to 28 Winner: 24
+Comparison: -26 to 20 Winner: -26
+Comparison: 13 to 12 Winner: 13
+Comparison: 10 to 17 Winner: 10
+Comparison: -19 to 11 Winner: -19
+Comparison: 14 to 18 Winner: 14
+Comparison: 16 to 15 Winner: 16
+Comparison: 43 to 42 Winner: 43
+Comparison: 45 to 47 Winner: 45
+Comparison: 49 to 41 Winner: 49
+Comparison: 44 to 48 Winner: 44
+Comparison: -46 to 40 Winner: -46
+Comparison: 103 to -12 Winner: 103
+Comparison: -75 to 107 Winner: -75
+Comparison: 109 to 171 Winner: 109
+Comparison: 179 to -178 Winner: 179
+Comparison: -176 to 170 Winner: -176
+Comparison: 93 to 92 Winner: 93
+Comparison: 95 to 97 Winner: 95
+Comparison: 99 to 91 Winner: 99
+Comparison: 94 to 98 Winner: 94
+Comparison: -96 to 3 Winner: -96
+Comparison: 5 to 6 Winner: 5
+Comparison: 8 to 1 Winner: 8
+Comparison: 2 to -1 Winner: 2
+Comparison: -3 to -2 Winner: -3
+Comparison: 111 to 111 Winner: 111
+Comparison: 73 to 77 Winner: 73
+Comparison: 79 to 78 Winner: 79
+Comparison: 70 to 83 Winner: 70
+Comparison: 87 to 81 Winner: 87
+Comparison: 88 to 80 Winner: 88
+Comparison: 35 to 39 Winner: 35
+Comparison: 34 to 38 Winner: 34
+Comparison: 33 to 173 Winner: 33
+Comparison: 67 to 69 Winner: 67
+Comparison: 68 to 60 Winner: 68
+Comparison: 23 to -25 Winner: 23
+Comparison: 29 to 28 Winner: 29
+Comparison: 20 to 13 Winner: 20
+Comparison: 17 to 11 Winner: 17
+Comparison: 18 to 16 Winner: 18
+Comparison: 43 to 47 Winner: 43
+Comparison: 49 to 48 Winner: 49
+Comparison: 40 to 103 Winner: 40
+Comparison: 107 to 171 Winner: 107
+Comparison: 179 to 170 Winner: 179
+Comparison: 93 to 97 Winner: 93
+Comparison: 99 to 98 Winner: 99
+Comparison: 3 to 6 Winner: 3
+Comparison: 8 to 2 Winner: 8
+Comparison: -2 to 111 Winner: -2
+Comparison: 77 to 79 Winner: 77
+Comparison: 83 to 87 Winner: 83
+Comparison: 88 to 39 Winner: 88
+Comparison: 38 to 173 Winner: 38
+Comparison: 69 to 68 Winner: 69
+Comparison: 23 to 29 Winner: 23
+Comparison: 20 to 17 Winner: 20
+Comparison: 18 to 47 Winner: 18
+Comparison: 49 to 103 Winner: 49
+Comparison: 171 to 179 Winner: 171
+Comparison: 97 to 99 Winner: 97
+Comparison: 6 to 8 Winner: 6
+Comparison: 111 to 111 Winner: 111
+Comparison: 79 to 87 Winner: 79
+Comparison: 88 to 173 Winner: 88
+Comparison: 69 to 29 Winner: 69
+Comparison: 20 to 47 Winner: 20
+Comparison: 103 to 179 Winner: 103
+Comparison: 99 to 8 Winner: 99
+Comparison: 111 to 111 Winner: 111
+Comparison: 87 to 173 Winner: 87
+Comparison: 69 to 47 Winner: 69
+Comparison: 179 to 99 Winner: 179
+Comparison: 111 to 111 Winner: 111
+Comparison: 173 to 69 Winner: 173
+Comparison: 179 to 111 Winner: 179
+Comparison: 173 to 179 Winner: 173
+
+Finding 2nd largest ...
+Comparison: -178 to 170 Winner: 170
+Comparison: 170 to 171 Winner: 171
+Comparison: 171 to 103 Winner: 171
+Comparison: 171 to 99 Winner: 171
+Comparison: 171 to 111 Winner: 171
+Comparison: 171 to 173 Winner: 173
+
+Winner is: 179
+2nd place: 173
+Results:
+-2 won against [-3] 
+2 won against [-1] 
+3 won against [-96] 
+6 won against [5, 3] 
+8 won against [1, 2, 6] 
+11 won against [-19] 
+13 won against [12] 
+16 won against [15] 
+17 won against [10, 11] 
+18 won against [14, 16] 
+20 won against [-26, 13, 17] 
+23 won against [-22, -25] 
+-25 won against [-27] 
+28 won against [24] 
+29 won against [21, 28, 23] 
+33 won against [30] 
+34 won against [31] 
+35 won against [32] 
+38 won against [-36, 34] 
+39 won against [37, 35] 
+40 won against [-46] 
+170 won against [-176] 
+43 won against [42] 
+171 won against [109, 107] 
+173 won against [62, 33, 38, 88, 87, 69] 
+47 won against [45, 43, 18, 20] 
+48 won against [44] 
+49 won against [41, 48] 
+179 won against [-178, 170, 171, 103, 99, 111, 173] 
+60 won against [-66] 
+67 won against [65] 
+68 won against [64, 60] 
+69 won against [61, 67, 68, 29, 47] 
+70 won against [-76] 
+73 won against [72] 
+77 won against [75, 73] 
+78 won against [74] 
+79 won against [71, 78, 77] 
+80 won against [-86] 
+81 won against [-89] 
+83 won against [82, 70] 
+87 won against [85, 81, 83, 79] 
+88 won against [84, 80, 39] 
+93 won against [92] 
+97 won against [95, 93] 
+98 won against [94] 
+99 won against [91, 98, 97, 8] 
+103 won against [-12, 40, 49] 
+107 won against [-75] 
+111 won against [-2] 
+============================
+============================
+8 
+Finding largest ...
+Comparison: 8 to 8 Winner: 8
+
+Finding 2nd largest ...
+
+Winner is: 8
+2nd place: 8
+Results:
+============================
+============================
+6 7 
+Finding largest ...
+Comparison: 6 to 7 Winner: 6
+
+Finding 2nd largest ...
+
+Winner is: 7
+2nd place: 6
+Results:
+7 won against [6] 
+============================
+============================
+7 6 
+Finding largest ...
+Comparison: 7 to 6 Winner: 7
+
+Finding 2nd largest ...
+
+Winner is: 7
+2nd place: 6
+Results:
+7 won against [6] 
+============================
+============================
+4 8 9 
+Finding largest ...
+Comparison: 4 to 8 Winner: 4
+Comparison: 9 to 9 Winner: 9
+Comparison: 8 to 9 Winner: 8
+
+Finding 2nd largest ...
+
+Winner is: 9
+2nd place: 8
+Results:
+8 won against [4] 
+9 won against [8] 
+============================
+============================
+9 8 4 
+Finding largest ...
+Comparison: 9 to 8 Winner: 9
+Comparison: 4 to 4 Winner: 4
+Comparison: 9 to 4 Winner: 9
+
+Finding 2nd largest ...
+Comparison: 8 to 4 Winner: 8
+
+Winner is: 9
+2nd place: 8
+Results:
+9 won against [8, 4] 
+============================
+============================
+4 9 8 
+Finding largest ...
+Comparison: 4 to 9 Winner: 4
+Comparison: 8 to 8 Winner: 8
+Comparison: 9 to 8 Winner: 9
+
+Finding 2nd largest ...
+Comparison: 4 to 8 Winner: 8
+
+Winner is: 9
+2nd place: 8
+Results:
+9 won against [4, 8] 
+============================
