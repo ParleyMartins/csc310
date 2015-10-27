@@ -2,14 +2,14 @@ package second_assignment;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Sort {
 
-	private static PrintWriter out;
+	private static PrintStream out;
 
 	private int quickKeyComp;
 	private int quickKeyMoves;
@@ -45,7 +45,7 @@ public class Sort {
 		quickKeyComp = 0;
 		quickKeyMoves = 0;
 		quickTime = System.nanoTime();
-		// quickList = quickSort(originalList);
+		quickSort(0, originalList.length - 1);
 		quickTime = System.nanoTime() - quickTime;
 	}
 
@@ -79,16 +79,12 @@ public class Sort {
 		File file = new File(INPUT_FILE);
 		try {
 			in = new Scanner(file);
-			out = new PrintWriter(OUTPUT_FILE, "UTF-8");
+			out = new PrintStream(OUTPUT_FILE, "UTF-8");
 			while (in.hasNextInt()) {
 				int[] list = getLine(in);
 				Sort sortAlgorithms = new Sort(list);
-				out.print("Running MergeSort on list: ");
-				sortAlgorithms.printList(list);
-				sortAlgorithms.mergeSort();
-				out.print("Finished sort: ");
-				sortAlgorithms.printList(sortAlgorithms.getMergeList());
-				sortAlgorithms.printMergeStatics();
+				// sortAlgorithms.printMergeSortResults();
+				sortAlgorithms.printQuickSortResults();
 			}
 			in.close();
 			out.close();
@@ -99,6 +95,24 @@ public class Sort {
 			e.printStackTrace();
 		}
 
+	}
+
+	public void printQuickSortResults() {
+		out.print("Running QuickSort on list: ");
+		printList(originalList);
+		quickSort();
+		out.print("Finished sort: ");
+		printList(getQuickList());
+		printQuickStatics();
+	}
+
+	public void printMergeSortResults() {
+		out.print("Running MergeSort on list: ");
+		printList(originalList);
+		mergeSort();
+		out.print("Finished sort: ");
+		printList(getMergeList());
+		printMergeStatics();
 	}
 
 	private static int[] getLine(Scanner in) {
@@ -165,28 +179,102 @@ public class Sort {
 	}
 
 	private int[] baseCase(int[] list) {
-		for (int i = 0; i < list.length - 1; i++) {
+		return baseCase(list, 0, list.length);
+	}
+
+	private int[] baseCase(int[] list, int begin, int end) {
+		for (int i = begin; i < end - 1; i++) {
 			if (list[i] > list[i + 1]) {
 				int temp = list[i + 1];
 				list[i + 1] = list[i];
 				list[i] = temp;
 				mergeKeyMoves += 3;
+				quickKeyMoves += 3;
 			}
 			mergeKeyComp++;
+			quickKeyComp++;
 		}
 		if (list.length > 1 && list[0] > list[1]) {
 			int temp = list[0];
 			list[0] = list[1];
 			list[1] = temp;
 			mergeKeyMoves += 3;
+			quickKeyMoves += 3;
 		}
 		mergeKeyComp++;
+		quickKeyComp++;
 		return list;
 	}
 
+	private void medianOfThree(int pos1, int pos2, int pos3) {
+		if (quickList.length > 0) {
+			if (quickList[pos1] > quickList[pos2]) {
+				swap(pos1, pos2);
+				quickKeyMoves += 3;
+			}
+			if (quickList[pos2] > quickList[pos3]) {
+				swap(pos2, pos3);
+				quickKeyMoves += 3;
+			}
+			if (quickList[pos2] < quickList[pos1]) {
+				swap(pos2, pos1);
+				quickKeyMoves += 3;
+			}
+			quickKeyComp += 3;
+		}
+	}
+
+	private void swap(int pos1, int pos2) {
+		int temp = quickList[pos1];
+		quickList[pos1] = quickList[pos2];
+		quickList[pos2] = temp;
+		quickKeyMoves += 3;
+	}
+
+	private void quickSort(final int begin, final int end) {
+//		printList(quickList, begin, end + 1);
+		if ((end - begin) <= 3) {
+			baseCase(quickList, begin, end);
+		} else {
+			int pivotPosition = (begin + end) / 2;
+			medianOfThree(begin, pivotPosition, end);
+			int low = begin + 1;
+			int high = end - 1;
+			while (low <= high && low < end) {
+				while (quickList[low] > quickList[pivotPosition]) {
+					swap(low, high);
+					high--;
+					quickKeyComp++;
+				}
+				if (low > pivotPosition) {
+					swap(low, pivotPosition);
+					low = pivotPosition;
+					pivotPosition = low + 1;
+					quickKeyComp++;
+				} else {
+					low++;
+				}
+			}
+//			if (low > pivotPosition) {
+//				swap(low, pivotPosition);
+//				low = pivotPosition;
+//				pivotPosition = low + 1;
+//				quickKeyComp++;
+//			}
+			quickSort(begin, pivotPosition);
+			quickSort(pivotPosition + 1, end);
+		}
+//		out.print("====>");
+//		printList(quickList);
+	}
+
 	private void printList(final int[] list) {
+		printList(list, 0, list.length);
+	}
+
+	private void printList(final int[] list, int begin, int end) {
 		out.print("[ ");
-		for (int i = 0; i < list.length; i++) {
+		for (int i = begin; i < end; i++) {
 			out.print(list[i] + " ");
 		}
 		out.println("] ");
