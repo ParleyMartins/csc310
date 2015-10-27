@@ -207,7 +207,7 @@ public class Sort {
 	}
 
 	private void medianOfThree(int pos1, int pos2, int pos3) {
-		if (quickList.length > 0) {
+		if (quickList.length > 1 && pos3 - pos1 > 1) {
 			if (quickList[pos1] > quickList[pos2]) {
 				swap(pos1, pos2);
 				quickKeyMoves += 3;
@@ -232,40 +232,42 @@ public class Sort {
 	}
 
 	private void quickSort(final int begin, final int end) {
-//		printList(quickList, begin, end + 1);
-		if ((end - begin) <= 3) {
-			baseCase(quickList, begin, end);
+		// printList(quickList, begin, end + 1);
+		if ((end - begin) < 3) {
+//			printList(quickList, begin, end);
+			medianOfThree(begin, begin + 1, end);
+//			printList(quickList, begin, end);
 		} else {
 			int pivotPosition = (begin + end) / 2;
 			medianOfThree(begin, pivotPosition, end);
 			int low = begin + 1;
 			int high = end - 1;
+//			out.println("Boundaries:" + begin + " - " + end);
+//			out.println("Pivot: " + quickList[pivotPosition] + ". Position: " + pivotPosition);
 			while (low <= high && low < end) {
-				while (quickList[low] > quickList[pivotPosition]) {
-					swap(low, high);
-					high--;
-					quickKeyComp++;
-				}
 				if (low > pivotPosition) {
 					swap(low, pivotPosition);
 					low = pivotPosition;
 					pivotPosition = low + 1;
 					quickKeyComp++;
-				} else {
-					low++;
 				}
+				while (quickList[low] > quickList[pivotPosition]) {
+					swap(low, high);
+					if (high == pivotPosition) {
+						pivotPosition = low;
+						// quickKeyMoves++;
+					}
+					high--;
+					quickKeyComp += 2;
+				}
+				low++;
 			}
-//			if (low > pivotPosition) {
-//				swap(low, pivotPosition);
-//				low = pivotPosition;
-//				pivotPosition = low + 1;
-//				quickKeyComp++;
-//			}
+//			out.println("[after sort] Pivot: " + quickList[pivotPosition] + ". Position: " + pivotPosition);
 			quickSort(begin, pivotPosition);
 			quickSort(pivotPosition + 1, end);
 		}
-//		out.print("====>");
-//		printList(quickList);
+		// out.print("====>");
+		// printList(quickList);
 	}
 
 	private void printList(final int[] list) {
