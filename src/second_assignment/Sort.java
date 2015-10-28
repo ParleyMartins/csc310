@@ -30,7 +30,7 @@ public class Sort {
 	}
 
 	public static void main(String[] args) {
-		readFile();
+		readFileAndRunSorts();
 	}
 
 	public void mergeSort() {
@@ -71,7 +71,7 @@ public class Sort {
 		return originalList;
 	}
 
-	private static void readFile() {
+	private static void readFileAndRunSorts() {
 		String FOLDER = "C:\\Users\\Parley\\Documents\\GitHub\\csc310\\src";
 		String INPUT_FILE = FOLDER + "\\second_assignment\\data.txt";
 		String OUTPUT_FILE = FOLDER + "\\second_assignment\\output.txt";
@@ -83,7 +83,7 @@ public class Sort {
 			while (in.hasNextInt()) {
 				int[] list = getLine(in);
 				Sort sortAlgorithms = new Sort(list);
-				// sortAlgorithms.printMergeSortResults();
+				sortAlgorithms.printMergeSortResults();
 				sortAlgorithms.printQuickSortResults();
 			}
 			in.close();
