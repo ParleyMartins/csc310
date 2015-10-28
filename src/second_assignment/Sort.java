@@ -30,7 +30,28 @@ public class Sort {
 	}
 
 	public static void main(String[] args) {
-		readFileAndRunSorts();
+		String FOLDER = "C:\\Users\\Parley\\Documents\\GitHub\\csc310\\src";
+		String INPUT_FILE = FOLDER + "\\second_assignment\\data.txt";
+		String OUTPUT_FILE = FOLDER + "\\second_assignment\\output.txt";
+		Scanner in;
+		File file = new File(INPUT_FILE);
+		try {
+			in = new Scanner(file);
+			out = new PrintStream(OUTPUT_FILE, "UTF-8");
+			while (in.hasNextInt()) {
+				int[] list = getLine(in);
+				Sort sortAlgorithms = new Sort(list);
+				sortAlgorithms.printQuickSortResults();
+				sortAlgorithms.printMergeSortResults();
+			}
+			in.close();
+			out.close();
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void mergeSort() {
@@ -71,35 +92,9 @@ public class Sort {
 		return originalList;
 	}
 
-	private static void readFileAndRunSorts() {
-		String FOLDER = "C:\\Users\\Parley\\Documents\\GitHub\\csc310\\src";
-		String INPUT_FILE = FOLDER + "\\second_assignment\\data.txt";
-		String OUTPUT_FILE = FOLDER + "\\second_assignment\\output.txt";
-		Scanner in;
-		File file = new File(INPUT_FILE);
-		try {
-			in = new Scanner(file);
-			out = new PrintStream(OUTPUT_FILE, "UTF-8");
-			while (in.hasNextInt()) {
-				int[] list = getLine(in);
-				Sort sortAlgorithms = new Sort(list);
-				sortAlgorithms.printMergeSortResults();
-				sortAlgorithms.printQuickSortResults();
-			}
-			in.close();
-			out.close();
-
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
-		}
-
-	}
-
 	public void printQuickSortResults() {
 		out.print("Running QuickSort on list: ");
-		printList(originalList);
+		printList(getOriginalList());
 		quickSort();
 		out.print("Finished sort: ");
 		printList(getQuickList());
@@ -108,7 +103,7 @@ public class Sort {
 
 	public void printMergeSortResults() {
 		out.print("Running MergeSort on list: ");
-		printList(originalList);
+		printList(getOriginalList());
 		mergeSort();
 		out.print("Finished sort: ");
 		printList(getMergeList());
@@ -125,10 +120,9 @@ public class Sort {
 	}
 
 	private int[] mergeSort(int[] list) {
-		// printList(list);
 		int size = list.length;
 		if (size <= 3)
-			list = baseCase(list);
+			list = baseCase(list, 0, 1, size - 1);
 		else {
 			int halfSize = (size / 2);
 			int[] firstHalf = Arrays.copyOfRange(list, 0, halfSize);
@@ -178,81 +172,55 @@ public class Sort {
 		return mergedList;
 	}
 
-	private int[] baseCase(int[] list) {
-		return baseCase(list, 0, list.length);
-	}
-
-	private int[] baseCase(int[] list, int begin, int end) {
-		for (int i = begin; i < end - 1; i++) {
-			if (list[i] > list[i + 1]) {
-				int temp = list[i + 1];
-				list[i + 1] = list[i];
-				list[i] = temp;
-				mergeKeyMoves += 3;
+	private int[] baseCase(int[] list, int pos1, int pos2, int pos3) {
+		if (list.length > 1 && pos3 - pos1 >= 1) {
+			if (list[pos1] > list[pos2]) {
+				swap(list, pos1, pos2);
 				quickKeyMoves += 3;
+				mergeKeyMoves += 3;
 			}
-			mergeKeyComp++;
-			quickKeyComp++;
+			if (list[pos2] > list[pos3]) {
+				swap(list, pos2, pos3);
+				quickKeyMoves += 3;
+				mergeKeyMoves += 3;
+			}
+			if (list[pos2] < list[pos1]) {
+				swap(list, pos2, pos1);
+				quickKeyMoves += 3;
+				mergeKeyMoves += 3;
+			}
+			quickKeyComp += 3;
+			mergeKeyComp += 3;
 		}
-		if (list.length > 1 && list[0] > list[1]) {
-			int temp = list[0];
-			list[0] = list[1];
-			list[1] = temp;
-			mergeKeyMoves += 3;
-			quickKeyMoves += 3;
-		}
-		mergeKeyComp++;
-		quickKeyComp++;
 		return list;
 	}
 
-	private void medianOfThree(int pos1, int pos2, int pos3) {
-		if (quickList.length > 1 && pos3 - pos1 > 1) {
-			if (quickList[pos1] > quickList[pos2]) {
-				swap(pos1, pos2);
-				quickKeyMoves += 3;
-			}
-			if (quickList[pos2] > quickList[pos3]) {
-				swap(pos2, pos3);
-				quickKeyMoves += 3;
-			}
-			if (quickList[pos2] < quickList[pos1]) {
-				swap(pos2, pos1);
-				quickKeyMoves += 3;
-			}
-			quickKeyComp += 3;
-		}
-	}
-
-	private void swap(int pos1, int pos2) {
-		int temp = quickList[pos1];
-		quickList[pos1] = quickList[pos2];
-		quickList[pos2] = temp;
+	private int[] swap(int[] list, int pos1, int pos2) {
+		int temp = list[pos1];
+		list[pos1] = list[pos2];
+		list[pos2] = temp;
 		quickKeyMoves += 3;
+		mergeKeyMoves += 3;
+		return list;
 	}
 
 	private void quickSort(final int begin, final int end) {
-		// printList(quickList, begin, end + 1);
 		if ((end - begin) < 3) {
-//			printList(quickList, begin, end);
-			medianOfThree(begin, begin + 1, end);
-//			printList(quickList, begin, end);
+			baseCase(quickList, begin, begin + 1, end);
 		} else {
 			int pivotPosition = (begin + end) / 2;
-			medianOfThree(begin, pivotPosition, end);
+			baseCase(quickList, begin, pivotPosition, end);
 			int low = begin + 1;
 			int high = end - 1;
-//			out.println("Boundaries:" + begin + " - " + end);
-//			out.println("Pivot: " + quickList[pivotPosition] + ". Position: " + pivotPosition);
 			while (low <= high && low < end) {
 				if (low > pivotPosition) {
-					swap(low, pivotPosition);
+					swap(quickList, low, pivotPosition);
 					low = pivotPosition;
 					pivotPosition = low + 1;
 					quickKeyComp++;
 				}
 				while (quickList[low] > quickList[pivotPosition]) {
-					swap(low, high);
+					swap(quickList, low, high);
 					if (high == pivotPosition) {
 						pivotPosition = low;
 						// quickKeyMoves++;
@@ -262,12 +230,9 @@ public class Sort {
 				}
 				low++;
 			}
-//			out.println("[after sort] Pivot: " + quickList[pivotPosition] + ". Position: " + pivotPosition);
 			quickSort(begin, pivotPosition);
 			quickSort(pivotPosition + 1, end);
 		}
-		// out.print("====>");
-		// printList(quickList);
 	}
 
 	private void printList(final int[] list) {
