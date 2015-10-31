@@ -188,6 +188,7 @@ public class Sort {
 	 */
 	private int[] mergeSort(int[] list) {
 		int size = list.length;
+//		printList(list);
 		if (size <= 3)
 			list = baseCase(list, 0, 1, size - 1);
 		else {
@@ -199,6 +200,9 @@ public class Sort {
 			secondHalf = mergeSort(secondHalf);
 			list = mergeLists(firstHalf, secondHalf, size);
 		}
+//		out.print("====>");
+//		printList(list);
+//		out.print("\n");
 		return list;
 	}
 
@@ -321,33 +325,30 @@ public class Sort {
 	 *            the position of the last element of the list to be sorted.
 	 */
 	private void quickSort(final int first, final int last) {
+//		printList(quickList, first, last);
 		if ((last - first) < 3) {
 			baseCase(quickList, first, first + 1, last);
 		} else {
 			int pivotPosition = (first + last) / 2;
+			
 			baseCase(quickList, first, pivotPosition, last);
-			int low = first + 1;
-			int high = last - 1;
-			while (low <= high && low < last) {
-				if (low > pivotPosition) {
+			swap(quickList, first, pivotPosition);
+			pivotPosition = first;
+			int pivot = quickList[pivotPosition];
+			for(int low = first + 1; low < last; low++){		
+				if (quickList[low] < pivot) {
+					pivotPosition++;
 					swap(quickList, low, pivotPosition);
-					low = pivotPosition;
-					pivotPosition = low + 1;
-					quickKeyComp++;
+					quickKeyComp += 1;
 				}
-				while (quickList[low] > quickList[pivotPosition]) {
-					swap(quickList, low, high);
-					if (high == pivotPosition) {
-						pivotPosition = low;
-					}
-					high--;
-					quickKeyComp += 2;
-				}
-				low++;
 			}
-			quickSort(first, pivotPosition);
+			swap(quickList, first, pivotPosition);
+			quickSort(first, pivotPosition - 1);
 			quickSort(pivotPosition + 1, last);
 		}
+//		out.print("====>");
+//		printList(quickList, first, last);
+//		out.println();
 	}
 
 	/**
@@ -368,7 +369,7 @@ public class Sort {
 	 * @param begin
 	 *            the first element to be printed.
 	 * @param end
-	 *            the last element to be printed.
+	 *            the last position of the list to be printed.
 	 */
 	private void printList(final int[] list, int begin, int end) {
 		out.print("[ ");
