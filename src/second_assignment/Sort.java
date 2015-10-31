@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Sort {
@@ -75,7 +74,7 @@ public class Sort {
 		mergeKeyComp = 0;
 		mergeKeyMoves = 0;
 		mergeTime = System.nanoTime();
-		mergeList = mergeSort(originalList);
+		mergeSort(0, originalList.length - 1);
 		mergeTime = System.nanoTime() - mergeTime;
 	}
 
@@ -186,24 +185,19 @@ public class Sort {
 	 *            The unsorted list
 	 * @return a sorted array of integers
 	 */
-	private int[] mergeSort(int[] list) {
-		int size = list.length;
+	private void mergeSort(int first, int last) {
 //		printList(list);
-		if (size <= 3)
-			list = baseCase(list, 0, 1, size - 1);
+		if (last - first < 3)
+			mergeList = baseCase(mergeList, first, first + 1, last);
 		else {
-			int halfSize = (size / 2);
-			int[] firstHalf = Arrays.copyOfRange(list, 0, halfSize);
-			int[] secondHalf = Arrays.copyOfRange(list, halfSize, size);
-
-			firstHalf = mergeSort(firstHalf);
-			secondHalf = mergeSort(secondHalf);
-			list = mergeLists(firstHalf, secondHalf, size);
+			int middle = (first + last) / 2;
+			mergeSort(first, middle);
+			mergeSort(middle + 1, last);
+			mergeList = mergeLists(first, middle, middle + 1, last);
 		}
 //		out.print("====>");
 //		printList(list);
 //		out.print("\n");
-		return list;
 	}
 
 	/**
@@ -217,37 +211,32 @@ public class Sort {
 	 *            the size that the merged list has to have
 	 * @return Returns the an array of integers with two sorted lists merged
 	 */
-	private int[] mergeLists(int[] firstHalf, int[] secondHalf, int size) {
-		int mergedList[] = new int[size];
-		int firstIt = 0;
-		int secondIt = 0;
-		int mergedIt = 0;
-		while (firstIt < firstHalf.length && secondIt < secondHalf.length) {
-			if (firstHalf[firstIt] < secondHalf[secondIt]) {
-				mergedList[mergedIt] = firstHalf[firstIt];
-				firstIt++;
+	private int[] mergeLists(int first1, int last1, int first2, int last2) {
+		int mergedList[] = mergeList.clone();
+		int mergedIt = first1;
+		while (first1 <= last1 && first2 <= last2) {
+			if (mergeList[first1] < mergeList[first2]) {
+				mergedList[mergedIt] = mergeList[first1];
+				first1++;
 			} else {
-				mergedList[mergedIt] = secondHalf[secondIt];
-				secondIt++;
+				mergedList[mergedIt] = mergeList[first2];
+				first2++;
 			}
 			mergeKeyComp++;
 			mergeKeyMoves++;
 			mergedIt++;
 		}
 		int smallestIt = 0;
-		int[] unfinishedList;
-		int halfSize = 0;
-		if (firstIt >= secondIt) {
-			smallestIt = secondIt;
-			unfinishedList = secondHalf;
-			halfSize = secondHalf.length;
+		int last = 0;
+		if (first1 > first2) {
+			smallestIt = first2;
+			last = last2;
 		} else {
-			smallestIt = firstIt;
-			unfinishedList = firstHalf;
-			halfSize = firstHalf.length;
+			smallestIt = first1;
+			last = last1;
 		}
-		while (smallestIt < halfSize) {
-			mergedList[mergedIt] = unfinishedList[smallestIt];
+		while (smallestIt <= last) {
+			mergedList[mergedIt] = mergeList[smallestIt];
 			smallestIt++;
 			mergedIt++;
 			mergeKeyMoves++;
