@@ -6,6 +6,23 @@ import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
+/**
+ * This class has two sort algorithms implemented, quick and merge. You
+ * initialize the class with the list to be sorted. You can run each sort and
+ * then run the statistics (separated stages) or run the methods that do all
+ * that for you (run and print the results).
+ * 
+ * Getters are provided to access the lists (original, mergeSort, quickSort),
+ * but once initialized, the original list (and consequently the others) cannot
+ * be modified.
+ * 
+ * To change the input or/and the output file change their address in the main
+ * function and recompile.
+ * 
+ * @author Parley Pacheco Martins 1484000
+ * October 31st, 2015
+ *
+ */
 public class Sort {
 
 	private static PrintStream out;
@@ -23,7 +40,7 @@ public class Sort {
 	private final int originalList[];
 
 	/**
-	 * This constructs a class Sort. Has two types of sort implemented, quick
+	 * This constructs a class Sort. It has two types of sort implemented, quick
 	 * and merge.
 	 * 
 	 * @param list
@@ -36,7 +53,8 @@ public class Sort {
 	}
 
 	/**
-	 * The main function. Runs the sorts and prints the results
+	 * The main function. Runs the sorts and prints the results in an output
+	 * file.
 	 * 
 	 * @param args
 	 *            Standard parameter
@@ -44,7 +62,7 @@ public class Sort {
 	public static void main(String[] args) {
 		String FOLDER = "C:\\Users\\Parley\\Documents\\GitHub\\csc310\\src";
 		String INPUT_FILE = FOLDER + "\\second_assignment\\data.txt";
-		String OUTPUT_FILE = FOLDER + "\\second_assignment\\output.txt";
+		String OUTPUT_FILE = FOLDER + "\\second_assignment\\output6.txt";
 		Scanner in;
 		File file = new File(INPUT_FILE);
 		try {
@@ -53,8 +71,8 @@ public class Sort {
 			while (in.hasNextInt()) {
 				int[] list = getLine(in);
 				Sort sortAlgorithms = new Sort(list);
-				sortAlgorithms.printQuickSortResults();
 				sortAlgorithms.printMergeSortResults();
+				sortAlgorithms.printQuickSortResults();
 			}
 			in.close();
 			out.close();
@@ -140,12 +158,14 @@ public class Sort {
 	 * and the sorted list
 	 */
 	public void printQuickSortResults() {
+		out.println("===================================");
 		out.print("Running QuickSort on list: ");
 		printList(getOriginalList());
 		quickSort();
 		out.print("Finished sort: ");
 		printList(getQuickList());
 		printQuickStatics();
+		out.println("===================================");
 	}
 
 	/**
@@ -153,12 +173,14 @@ public class Sort {
 	 * and the sorted list
 	 */
 	public void printMergeSortResults() {
+		out.println("===================================");
 		out.print("Running MergeSort on list: ");
 		printList(getOriginalList());
 		mergeSort();
 		out.print("Finished sort: ");
 		printList(getMergeList());
 		printMergeStatics();
+		out.println("===================================");
 	}
 
 	/**
@@ -179,14 +201,15 @@ public class Sort {
 
 	/**
 	 * The actual sort algorithm. It's a recursive algorithm that is first
-	 * called from the public interface with the original list.
+	 * called from the public interface with the first and last positions of the
+	 * original list.
 	 * 
 	 * @param list
 	 *            The unsorted list
 	 * @return a sorted array of integers
 	 */
 	private void mergeSort(int first, int last) {
-//		printList(list);
+		printList(mergeList, first, last);
 		if (last - first < 3)
 			mergeList = baseCase(mergeList, first, first + 1, last);
 		else {
@@ -195,9 +218,9 @@ public class Sort {
 			mergeSort(middle + 1, last);
 			mergeList = mergeLists(first, middle, middle + 1, last);
 		}
-//		out.print("====>");
-//		printList(list);
-//		out.print("\n");
+		out.print("====>");
+		printList(mergeList);
+		out.print("\n");
 	}
 
 	/**
@@ -314,17 +337,17 @@ public class Sort {
 	 *            the position of the last element of the list to be sorted.
 	 */
 	private void quickSort(final int first, final int last) {
-//		printList(quickList, first, last);
+		printList(quickList, first, last);
 		if ((last - first) < 3) {
 			baseCase(quickList, first, first + 1, last);
 		} else {
 			int pivotPosition = (first + last) / 2;
-			
+
 			baseCase(quickList, first, pivotPosition, last);
 			swap(quickList, first, pivotPosition);
 			pivotPosition = first;
 			int pivot = quickList[pivotPosition];
-			for(int low = first + 1; low < last; low++){		
+			for (int low = first + 1; low < last; low++) {
 				if (quickList[low] < pivot) {
 					pivotPosition++;
 					swap(quickList, low, pivotPosition);
@@ -335,9 +358,9 @@ public class Sort {
 			quickSort(first, pivotPosition - 1);
 			quickSort(pivotPosition + 1, last);
 		}
-//		out.print("====>");
-//		printList(quickList, first, last);
-//		out.println();
+		out.print("====>");
+		printList(quickList, first, last);
+		out.println();
 	}
 
 	/**
@@ -347,7 +370,7 @@ public class Sort {
 	 *            list to be printed.
 	 */
 	private void printList(final int[] list) {
-		printList(list, 0, list.length);
+		printList(list, 0, list.length - 1);
 	}
 
 	/**
@@ -362,7 +385,7 @@ public class Sort {
 	 */
 	private void printList(final int[] list, int begin, int end) {
 		out.print("[ ");
-		for (int i = begin; i < end; i++) {
+		for (int i = begin; i <= end; i++) {
 			out.print(list[i] + " ");
 		}
 		out.println("] ");
