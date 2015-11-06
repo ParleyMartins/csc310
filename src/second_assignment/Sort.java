@@ -60,9 +60,9 @@ public class Sort {
 	 *            Standard parameter
 	 */
 	public static void main(String[] args) {
-		String FOLDER = "C:\\Users\\Parley\\Documents\\GitHub\\csc310\\src";
+		String FOLDER = "C:\\src\\csc310\\src";
 		String INPUT_FILE = FOLDER + "\\second_assignment\\data.txt";
-		String OUTPUT_FILE = FOLDER + "\\second_assignment\\output6.txt";
+		String OUTPUT_FILE = FOLDER + "\\second_assignment\\output.txt";
 		Scanner in;
 		File file = new File(INPUT_FILE);
 		try {
