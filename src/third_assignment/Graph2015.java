@@ -19,19 +19,23 @@ public class Graph2015 {
 
 	}
 
-	public void biConnect() {
-
-	}
-
-	public void biConnect(String labelRoot) {
-
-	}
-
-	public void biConnect(int nodeRoot) {
-
+	public void biConnect(int root) {
+		int i = root;
+		do {
+			if(nodes[i].color == Color.WHITE){
+				depthFirstSearch(i);
+			}
+			i++;
+			i = i%nodes.length;
+		} while (i != root);
 	}
 
 	public Node[] getNodes() {
 		return nodes;
+	}
+	
+	private void depthFirstSearch(int nodeId){
+		Node node = nodes[nodeId];
+		node.color = Color.GREY;
 	}
 }
