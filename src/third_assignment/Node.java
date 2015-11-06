@@ -7,6 +7,7 @@ public class Node {
 	private boolean articulationPoint;
 	private ArrayList<Integer> edges;
 	public Color color;
+	public int depthFirstIndex;
 
 	public Node() {
 		this(null);
@@ -16,6 +17,7 @@ public class Node {
 		this.label = label;
 		edges = new ArrayList<>();
 		color = Color.WHITE;
+		depthFirstIndex = -1;
 	}
 
 	public void addEdge(int node) {
