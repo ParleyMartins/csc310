@@ -1,8 +1,11 @@
 package third_assignment;
 
+import java.io.PrintStream;
+
 public class Graph2015 {
 	private Node[] nodes;
 	private int depthFirstIndex = 1;
+	private PrintStream out = System.out;
 
 	public Graph2015(int numberOfNodes) {
 		nodes = new Node[numberOfNodes];
@@ -49,11 +52,19 @@ public class Graph2015 {
 		node.color = Color.GREY;
 		depthFirstIndex++;
 		node.depthFirstIndex = depthFirstIndex;
-		System.out.println("Depth First Index of " + node.getLabel() + " is " + node.depthFirstIndex);
+		String printing = "Depth First Index of " + node.getLabel() + " is " + node.depthFirstIndex;
+		out.println(printing);
+		int notWhiteNodes = 0;
 		for (int nextNode : node.getEdges()) {
 			if (nodes[nextNode].color == Color.WHITE) {
 				depthFirstSearch(nextNode);
+			} else {
+				notWhiteNodes++;
 			}
+		}
+		if (node.getEdges().size() == notWhiteNodes) {
+			printing = "\tFound a leaf: " + node.getLabel();
+			out.println(printing);
 		}
 		node.color = Color.BLACK;
 	}
