@@ -2,12 +2,13 @@ package third_assignment;
 
 import java.io.PrintStream;
 import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class Graph2015 {
 	private Node[] nodes;
-	private int depthFirstIndex = 1;
+	private int depthFirstIndex = 0;
 	private PrintStream out = System.out;
-	private ArrayDeque<Integer> biconnectedComponents;
+	private Deque<Integer> biconnectedComponents;
 
 	public Graph2015(int numberOfNodes) {
 		biconnectedComponents = new ArrayDeque<>();
@@ -16,16 +17,6 @@ public class Graph2015 {
 			Node node = new Node();
 			nodes[i] = node;
 		}
-
-//		String FOLDER = "C:\\src\\csc310\\src";
-//		String OUTPUT_FILE = FOLDER + "\\third_assignment\\output.txt";
-//		File file = new File(OUTPUT_FILE);
-//		try {
-//			out = new PrintStream(file);
-//		} catch (FileNotFoundException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
 	}
 
 	public void addEdge(int node1, int node2) {
@@ -63,49 +54,64 @@ public class Graph2015 {
 	private int depthFirstSearch(int nodeId) {
 		Node node = nodes[nodeId];
 		node.color = Color.GREY;
-		depthFirstIndex++;
-		node.depthFirstIndex = depthFirstIndex;
-		String printing = "Depth First Index of " + node.getLabel() + " is ";
-		printing += node.depthFirstIndex;
-		out.println(printing);
+		setAndPrintIndex(nodeId);
+
 		int notWhiteNodes = 0;
 		int backlink = nodeId;
 		biconnectedComponents.add(nodeId);
 
 		for (int nextNode : node.getEdges()) {
-			if (nodes[nextNode].depthFirstIndex < nodes[backlink].depthFirstIndex)
+			if (nodes[nextNode].time < nodes[backlink].time)
 				backlink = nextNode;
 
 			if (nodes[nextNode].color == Color.WHITE) {
 				int backreturn = depthFirstSearch(nextNode);
-				if (nodes[backreturn].depthFirstIndex < nodes[backlink].depthFirstIndex) {
+				if (nodes[backreturn].time < nodes[backlink].time) {
 					backlink = backreturn;
 				}
-				if (nodeId == backlink) {
-					printing = "=====" + "Articulation Point " + node.getLabel();
-					out.println(printing);
-					out.println("****");
-					do {
-						out.print(nodes[biconnectedComponents.removeLast()].getLabel()+ " ");
-					} while (biconnectedComponents.peekLast() != nodeId);
-					out.println(nodes[biconnectedComponents.removeLast()].getLabel());
-					out.println("****");
-					biconnectedComponents.add(nodeId);
-				}
+				checkArticulationPoint(nodeId, backlink);
 			} else {
 				notWhiteNodes++;
 			}
-
 		}
-		// out.println("Backlink of " + node.getLabel() + " is " +
-		// nodes[backlink].getLabel());
-
-		if (node.getEdges().size() == notWhiteNodes) {
-			printing = "\tFound a leaf: " + node.getLabel();
-			out.println(printing);
-		}
-
+		printLeaf(notWhiteNodes, nodeId);
 		node.color = Color.BLACK;
 		return backlink;
+	}
+
+	private void setAndPrintIndex(int nodeId) {
+		depthFirstIndex++;
+		nodes[nodeId].time = depthFirstIndex;
+
+		out.print("Depth First Index of " + nodes[nodeId].getLabel());
+		out.println(" is " + depthFirstIndex);
+	}
+
+	private void checkArticulationPoint(int nodeId, int backlink) {
+		if (nodeId == backlink) {
+			printArticulationPoint(nodeId);
+			printBiconnectedComponents(nodeId);
+		}
+	}
+
+	private void printLeaf(int notWhiteNodes, int nodeId) {
+		if (nodes[nodeId].getEdges().size() == notWhiteNodes) {
+			out.println("\tFound a leaf: " + nodes[nodeId].getLabel());
+		}
+	}
+
+	private void printArticulationPoint(int id) {
+		out.println("====" + "Articulation Point " + nodes[id].getLabel());
+		nodes[id].setArticulationPoint(true);
+	}
+
+	private void printBiconnectedComponents(int nodeId) {
+		out.println("****");
+		do {
+			out.print(nodes[biconnectedComponents.removeLast()].getLabel() + " ");
+		} while (biconnectedComponents.peekLast() != nodeId);
+		out.println(nodes[biconnectedComponents.removeLast()].getLabel());
+		out.println("****");
+		biconnectedComponents.add(nodeId);
 	}
 }

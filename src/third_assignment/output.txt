@@ -1,3 +1,160 @@
+Starting graph processing tests for biconnected components
+========================================================================================
+========================================================================================
+Graph 1, example on pg 258 of McConnell
+================================================
+=====Biconnected components starting at F
+Depth First Index of F is 1
+Depth First Index of D is 2
+Depth First Index of B is 3
+Depth First Index of A is 4
+Depth First Index of C is 5
+	Found a leaf: C
+====Articulation Point D
+****
+C A B D
+****
+Depth First Index of E is 6
+Depth First Index of G is 7
+Depth First Index of H is 8
+Depth First Index of I is 9
+	Found a leaf: I
+====Articulation Point H
+****
+I H
+****
+====Articulation Point F
+****
+H G E D F
+****
+
+================================================
+=====Biconnected components starting at A
+Depth First Index of A is 1
+Depth First Index of B is 2
+Depth First Index of C is 3
+Depth First Index of D is 4
+Depth First Index of E is 5
+Depth First Index of F is 6
+Depth First Index of H is 7
+Depth First Index of G is 8
+	Found a leaf: G
+Depth First Index of I is 9
+	Found a leaf: I
+====Articulation Point A
+****
+I G H F E D C B A
+****
+
+================================================
+=====Biconnected components starting at D
+Depth First Index of D is 1
+Depth First Index of B is 2
+Depth First Index of A is 3
+Depth First Index of C is 4
+	Found a leaf: C
+====Articulation Point D
+****
+C A B D
+****
+Depth First Index of E is 5
+Depth First Index of F is 6
+Depth First Index of H is 7
+Depth First Index of G is 8
+	Found a leaf: G
+Depth First Index of I is 9
+	Found a leaf: I
+====Articulation Point D
+****
+I G H F E D
+****
+
+
+========================================================================================
+========================================================================================
+Graph 2, 1a on pg 261 of McConnell
+================================================
+=====Biconnected components starting at A
+Depth First Index of A is 1
+Depth First Index of B is 2
+Depth First Index of E is 3
+Depth First Index of I is 4
+Depth First Index of F is 5
+Depth First Index of C is 6
+Depth First Index of J is 7
+Depth First Index of G is 8
+Depth First Index of D is 9
+Depth First Index of K is 10
+	Found a leaf: K
+====Articulation Point J
+****
+K D G J
+****
+====Articulation Point I
+****
+J C F I
+****
+Depth First Index of H is 11
+	Found a leaf: H
+====Articulation Point A
+****
+H I E B A
+****
+
+================================================
+=====Biconnected components starting at F
+Depth First Index of F is 1
+Depth First Index of B is 2
+Depth First Index of A is 3
+Depth First Index of E is 4
+Depth First Index of I is 5
+	Found a leaf: I
+Depth First Index of H is 6
+	Found a leaf: H
+====Articulation Point F
+****
+H I E A B F
+****
+Depth First Index of C is 7
+Depth First Index of J is 8
+Depth First Index of G is 9
+Depth First Index of D is 10
+Depth First Index of K is 11
+	Found a leaf: K
+====Articulation Point F
+****
+K D G J C F
+****
+
+================================================
+=====Biconnected components starting at H
+Depth First Index of H is 1
+Depth First Index of A is 2
+Depth First Index of B is 3
+Depth First Index of E is 4
+Depth First Index of I is 5
+Depth First Index of F is 6
+Depth First Index of C is 7
+Depth First Index of J is 8
+Depth First Index of G is 9
+Depth First Index of D is 10
+Depth First Index of K is 11
+	Found a leaf: K
+====Articulation Point A
+****
+K D G J C F I E B A
+****
+====Articulation Point H
+****
+A H
+****
+
+
+========================================================================================
+========================================================================================
+Graph 3, 1b on pg 261 of McConnell
+================================================
+=====Biconnected components starting at A
 Depth First Index of A is 1
 Depth First Index of B is 2
 Depth First Index of F is 3
@@ -5,7 +162,7 @@ Depth First Index of E is 4
 Depth First Index of I is 5
 Depth First Index of J is 6
 	Found a leaf: J
-=====Articulation Point F
+====Articulation Point F
 ****
 J I E F
 ****
@@ -14,30 +171,33 @@ Depth First Index of C is 8
 Depth First Index of D is 9
 Depth First Index of H is 10
 	Found a leaf: H
-=====Articulation Point C
+====Articulation Point C
 ****
 H D C
 ****
-=====Articulation Point G
+====Articulation Point G
 ****
 C G
 ****
 Depth First Index of K is 11
 	Found a leaf: K
-=====Articulation Point F
+====Articulation Point F
 ****
 K G F
 ****
+
+================================================
+=====Biconnected components starting at G
 Depth First Index of G is 1
 Depth First Index of C is 2
 Depth First Index of D is 3
 Depth First Index of H is 4
 	Found a leaf: H
-=====Articulation Point C
+====Articulation Point C
 ****
 H D C
 ****
-=====Articulation Point G
+====Articulation Point G
 ****
 C G
 ****
@@ -45,11 +205,11 @@ Depth First Index of F is 5
 Depth First Index of B is 6
 Depth First Index of A is 7
 	Found a leaf: A
-=====Articulation Point B
+====Articulation Point B
 ****
 A B
 ****
-=====Articulation Point F
+====Articulation Point F
 ****
 B F
 ****
@@ -57,25 +217,28 @@ Depth First Index of E is 8
 Depth First Index of I is 9
 Depth First Index of J is 10
 	Found a leaf: J
-=====Articulation Point F
+====Articulation Point F
 ****
 J I E F
 ****
 Depth First Index of K is 11
 	Found a leaf: K
-=====Articulation Point G
+====Articulation Point G
 ****
 K F G
 ****
+
+================================================
+=====Biconnected components starting at F
 Depth First Index of F is 1
 Depth First Index of B is 2
 Depth First Index of A is 3
 	Found a leaf: A
-=====Articulation Point B
+====Articulation Point B
 ****
 A B
 ****
-=====Articulation Point F
+====Articulation Point F
 ****
 B F
 ****
@@ -83,7 +246,7 @@ Depth First Index of E is 4
 Depth First Index of I is 5
 Depth First Index of J is 6
 	Found a leaf: J
-=====Articulation Point F
+====Articulation Point F
 ****
 J I E F
 ****
@@ -92,17 +255,17 @@ Depth First Index of C is 8
 Depth First Index of D is 9
 Depth First Index of H is 10
 	Found a leaf: H
-=====Articulation Point C
+====Articulation Point C
 ****
 H D C
 ****
-=====Articulation Point G
+====Articulation Point G
 ****
 C G
 ****
 Depth First Index of K is 11
 	Found a leaf: K
-=====Articulation Point F
+====Articulation Point F
 ****
 K G F
 ****
