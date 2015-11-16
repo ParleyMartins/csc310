@@ -1,0 +1,108 @@
+Depth First Index of A is 1
+Depth First Index of B is 2
+Depth First Index of F is 3
+Depth First Index of E is 4
+Depth First Index of I is 5
+Depth First Index of J is 6
+	Found a leaf: J
+=====Articulation Point F
+****
+J I E F
+****
+Depth First Index of G is 7
+Depth First Index of C is 8
+Depth First Index of D is 9
+Depth First Index of H is 10
+	Found a leaf: H
+=====Articulation Point C
+****
+H D C
+****
+=====Articulation Point G
+****
+C G
+****
+Depth First Index of K is 11
+	Found a leaf: K
+=====Articulation Point F
+****
+K G F
+****
+Depth First Index of G is 1
+Depth First Index of C is 2
+Depth First Index of D is 3
+Depth First Index of H is 4
+	Found a leaf: H
+=====Articulation Point C
+****
+H D C
+****
+=====Articulation Point G
+****
+C G
+****
+Depth First Index of F is 5
+Depth First Index of B is 6
+Depth First Index of A is 7
+	Found a leaf: A
+=====Articulation Point B
+****
+A B
+****
+=====Articulation Point F
+****
+B F
+****
+Depth First Index of E is 8
+Depth First Index of I is 9
+Depth First Index of J is 10
+	Found a leaf: J
+=====Articulation Point F
+****
+J I E F
+****
+Depth First Index of K is 11
+	Found a leaf: K
+=====Articulation Point G
+****
+K F G
+****
+Depth First Index of F is 1
+Depth First Index of B is 2
+Depth First Index of A is 3
+	Found a leaf: A
+=====Articulation Point B
+****
+A B
+****
+=====Articulation Point F
+****
+B F
+****
+Depth First Index of E is 4
+Depth First Index of I is 5
+Depth First Index of J is 6
+	Found a leaf: J
+=====Articulation Point F
+****
+J I E F
+****
+Depth First Index of G is 7
+Depth First Index of C is 8
+Depth First Index of D is 9
+Depth First Index of H is 10
+	Found a leaf: H
+=====Articulation Point C
+****
+H D C
+****
+=====Articulation Point G
+****
+C G
+****
+Depth First Index of K is 11
+	Found a leaf: K
+=====Articulation Point F
+****
+K G F
+****

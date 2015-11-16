@@ -1,3 +1,5 @@
+package third_assignment;
+
 /****************************************************************************
  * RHgraphTest.java
  * AUCSC 310
@@ -22,7 +24,6 @@
  *              biconnected components from various starting points
  * 
  */
-package third_assignment;
 
 
 public class RHgraphTest {
