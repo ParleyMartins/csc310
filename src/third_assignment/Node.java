@@ -17,7 +17,7 @@ public class Node {
 		this.label = label;
 		edges = new ArrayList<>();
 		color = Color.WHITE;
-		time = -1;
+		time = Integer.MAX_VALUE;
 	}
 
 	public void addEdge(int node) {
@@ -42,5 +42,10 @@ public class Node {
 
 	public ArrayList<Integer> getEdges() {
 		return edges;
+	}
+	
+	@Override
+	public String toString() {
+		return getLabel();
 	}
 }

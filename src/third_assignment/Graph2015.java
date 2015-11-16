@@ -52,37 +52,38 @@ public class Graph2015 {
 	}
 
 	private int depthFirstSearch(int nodeId) {
-		Node node = nodes[nodeId];
-		node.color = Color.GREY;
-		setAndPrintIndex(nodeId);
-
+		nodes[nodeId].color = Color.GREY;
+		setIndex(nodeId);
+		printIndex(nodeId);
 		int notWhiteNodes = 0;
 		int backlink = nodeId;
 		biconnectedComponents.add(nodeId);
 
-		for (int nextNode : node.getEdges()) {
+		for (int nextNode : nodes[nodeId].getEdges()) {
 			if (nodes[nextNode].time < nodes[backlink].time)
 				backlink = nextNode;
-
 			if (nodes[nextNode].color == Color.WHITE) {
 				int backreturn = depthFirstSearch(nextNode);
+				checkArticulationPoint(nodeId, backreturn);
 				if (nodes[backreturn].time < nodes[backlink].time) {
 					backlink = backreturn;
 				}
-				checkArticulationPoint(nodeId, backlink);
+//				checkArticulationPoint(nodeId, backlink);
 			} else {
 				notWhiteNodes++;
 			}
 		}
 		printLeaf(notWhiteNodes, nodeId);
-		node.color = Color.BLACK;
+		nodes[nodeId].color = Color.BLACK;
 		return backlink;
 	}
 
-	private void setAndPrintIndex(int nodeId) {
+	private void setIndex(int nodeId) {
 		depthFirstIndex++;
 		nodes[nodeId].time = depthFirstIndex;
+	}
 
+	private void printIndex(int nodeId) {
 		out.print("Depth First Index of " + nodes[nodeId].getLabel());
 		out.println(" is " + depthFirstIndex);
 	}

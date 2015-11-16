@@ -35,16 +35,16 @@ public class RHgraphTest {
      */
     public static void main(String[] args){
 
-	System.out.println("Starting graph processing tests for biconnected "
-                + "components");
-
-        //**********First graph
-        doGraph1();
-
-	//**********Second graph
-	System.out.println();
-	System.out.println();
-        doGraph2();
+//	System.out.println("Starting graph processing tests for biconnected "
+//                + "components");
+//
+//        //**********First graph
+//        doGraph1();
+//
+//	//**********Second graph
+//	System.out.println();
+//	System.out.println();
+//        doGraph2();
         
 	//***********Third graph
 	System.out.println();
