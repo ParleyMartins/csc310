@@ -40,6 +40,9 @@ public class Graph2015 {
 	public void biConnect(int root) {
 		initialConditions();
 		int i = root;
+		out.println("================================================");
+		out.println("====Starting at " + nodes[i].getLabel());
+		out.println();
 		do {
 			if (nodes[i].color == Color.WHITE) {
 				depthFirstSearch(i);
@@ -47,6 +50,7 @@ public class Graph2015 {
 			i++;
 			i = i % nodes.length;
 		} while (i != root);
+		out.println();
 	}
 
 	private void initialConditions() {
@@ -89,11 +93,13 @@ public class Graph2015 {
 	}
 
 	private void printBacklink(int nodeId, int backlink) {
-		if (nodeId != backlink) {
+		int timeNode = nodes[nodeId].time;
+		int timeBack = nodes[backlink].time;
+		if (nodeId != backlink && timeNode != timeBack + 1) {
 			String labelNode = nodes[nodeId].getLabel();
 			String labelBack = nodes[backlink].getLabel();
 			out.print("  Set backlink of " + labelNode);
-			out.println(" to " + backlink + " (" + labelBack + ")");
+			out.println(" to node " + backlink + " (" + labelBack + ")");
 		}
 	}
 
@@ -127,10 +133,10 @@ public class Graph2015 {
 	private void printArticulationPoint(String label, boolean isRoot) {
 		out.println();
 		out.println("APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP");
-		out.print("AP  Found Articulation Point ");
+		out.print("AP  Found Articulation Point");
 		if (isRoot)
-			out.print("@ ROOT: ");
-		out.println(label);
+			out.print(" @ ROOT");
+		out.println(": " + label);
 		out.println("APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP");
 		out.println();
 	}
