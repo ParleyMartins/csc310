@@ -1,6 +1,8 @@
 package third_assignment;
 
+import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
@@ -16,6 +18,13 @@ public class Graph2015 {
 		for (int i = 0; i < numberOfNodes; i++) {
 			Node node = new Node();
 			nodes[i] = node;
+		}
+		String FOLDER = "C:\\src\\csc310\\src";
+		String OUTPUT_FILE = FOLDER + "\\third_assignment\\output.txt";
+		try {
+			out = new PrintStream(OUTPUT_FILE, "UTF-8");
+		} catch (FileNotFoundException | UnsupportedEncodingException e) {
+			e.printStackTrace();
 		}
 	}
 
@@ -43,6 +52,8 @@ public class Graph2015 {
 	private void initialConditions() {
 		for (int i = 0; i < nodes.length; i++) {
 			nodes[i].color = Color.WHITE;
+			nodes[i].time = Integer.MAX_VALUE;
+			nodes[i].setArticulationPoint(false);
 		}
 		depthFirstIndex = 0;
 	}
@@ -55,7 +66,7 @@ public class Graph2015 {
 		nodes[nodeId].color = Color.GREY;
 		setIndex(nodeId);
 		printIndex(nodeId);
-		int notWhiteNodes = 0;
+		int whiteNodes = 0;
 		int backlink = nodeId;
 		biconnectedComponents.add(nodeId);
 
@@ -63,27 +74,27 @@ public class Graph2015 {
 			if (nodes[nextNode].time < nodes[backlink].time)
 				backlink = nextNode;
 			if (nodes[nextNode].color == Color.WHITE) {
+				whiteNodes++;
 				int backreturn = depthFirstSearch(nextNode);
-				checkArticulationPoint(nodeId, backreturn);
+				checkAP(nodeId, backreturn, whiteNodes);
 				if (nodes[backreturn].time < nodes[backlink].time) {
 					backlink = backreturn;
 				}
-				// checkArticulationPoint(nodeId, backlink);
-			} else {
-				notWhiteNodes++;
 			}
 		}
-		printLeaf(notWhiteNodes, nodeId);
 		printBacklink(nodeId, backlink);
+		printLeaf(whiteNodes, nodeId);
 		nodes[nodeId].color = Color.BLACK;
 		return backlink;
 	}
 
 	private void printBacklink(int nodeId, int backlink) {
-		String labelNode = nodes[nodeId].getLabel();
-		String labelBack = nodes[backlink].getLabel();
-		out.print("  Set backlink of " + labelNode);
-		out.println(" to " + backlink + " (" + labelBack + ")");
+		if (nodeId != backlink) {
+			String labelNode = nodes[nodeId].getLabel();
+			String labelBack = nodes[backlink].getLabel();
+			out.print("  Set backlink of " + labelNode);
+			out.println(" to " + backlink + " (" + labelBack + ")");
+		}
 	}
 
 	private void setIndex(int nodeId) {
@@ -96,24 +107,30 @@ public class Graph2015 {
 		out.println(" is " + depthFirstIndex);
 	}
 
-	private void checkArticulationPoint(int nodeId, int backlink) {
-		if (nodeId == backlink) {
-			nodes[nodeId].setArticulationPoint(true);
-			printArticulationPoint(nodes[nodeId].getLabel());
+	private void checkAP(int nodeId, int backlink, int whitenodes) {
+		Node node = nodes[nodeId];
+		if (nodeId == backlink && node.getEdges().size() != whitenodes) {
+			if (!node.isArticulationPoint()) {
+				node.setArticulationPoint(true);
+				printArticulationPoint(node.getLabel(), node.isRoot());
+			}
 			printBiconnectedComponents(nodeId);
 		}
 	}
 
-	private void printLeaf(int notWhiteNodes, int nodeId) {
-		if (nodes[nodeId].getEdges().size() == notWhiteNodes) {
+	private void printLeaf(int whiteNodes, int nodeId) {
+		if (whiteNodes == 0) {
 			out.println("  Found a leaf: " + nodes[nodeId].getLabel());
 		}
 	}
 
-	private void printArticulationPoint(String label) {
+	private void printArticulationPoint(String label, boolean isRoot) {
 		out.println();
 		out.println("APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP");
-		out.println("AP  Found Articulation Point: " + label);
+		out.print("AP  Found Articulation Point ");
+		if (isRoot)
+			out.print("@ ROOT: ");
+		out.println(label);
 		out.println("APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP");
 		out.println();
 	}
@@ -123,7 +140,8 @@ public class Graph2015 {
 		out.println("BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC");
 		out.print("BC  Found bi component: ");
 		do {
-			out.print(nodes[biconnectedComponents.removeLast()].getLabel() + " ");
+			int index = biconnectedComponents.removeLast();
+			out.print(nodes[index].getLabel() + " ");
 		} while (biconnectedComponents.peekLast() != nodeId);
 		out.println(nodes[biconnectedComponents.removeLast()].getLabel());
 		out.println("BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC");

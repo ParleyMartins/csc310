@@ -44,6 +44,10 @@ public class Node {
 		return edges;
 	}
 	
+	public boolean isRoot(){
+		return time == 1;
+	}
+	
 	@Override
 	public String toString() {
 		return getLabel();
