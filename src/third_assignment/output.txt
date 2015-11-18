@@ -1,3 +1,356 @@
+Starting graph processing tests for biconnected components
+========================================================================================
+========================================================================================
+Graph 1, example on pg 258 of McConnell
+================================================
+=====Biconnected components starting at F
+================================================
+====Starting at F
+
+Depth First Index of F is 1
+Depth First Index of D is 2
+Depth First Index of B is 3
+Depth First Index of A is 4
+Depth First Index of C is 5
+  Set backlink of C to node 3 (D)
+  Found a leaf: C
+  Set backlink of A to node 3 (D)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: D
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+BC  Found bi component: C A B D
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+Depth First Index of E is 6
+Depth First Index of G is 7
+Depth First Index of H is 8
+Depth First Index of I is 9
+  Found a leaf: I
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: H
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+BC  Found bi component: I H
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+  Set backlink of H to node 5 (F)
+  Set backlink of G to node 5 (F)
+  Set backlink of E to node 5 (F)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point @ ROOT: F
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+BC  Found bi component: H G E D F
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+
+
+================================================
+=====Biconnected components starting at A
+================================================
+====Starting at A
+
+Depth First Index of A is 1
+Depth First Index of B is 2
+Depth First Index of C is 3
+Depth First Index of D is 4
+Depth First Index of E is 5
+Depth First Index of F is 6
+Depth First Index of H is 7
+Depth First Index of G is 8
+  Set backlink of G to node 4 (E)
+  Found a leaf: G
+Depth First Index of I is 9
+  Set backlink of I to node 7 (H)
+  Found a leaf: I
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: H
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+BC  Found bi component: I G H
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+  Set backlink of H to node 4 (E)
+  Set backlink of F to node 3 (D)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: D
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+BC  Found bi component: H F E D
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+  Set backlink of D to node 1 (B)
+  Set backlink of C to node 0 (A)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point @ ROOT: A
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+BC  Found bi component: D C B A
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+
+
+================================================
+=====Biconnected components starting at D
+================================================
+====Starting at D
+
+Depth First Index of D is 1
+Depth First Index of B is 2
+Depth First Index of A is 3
+Depth First Index of C is 4
+  Set backlink of C to node 3 (D)
+  Found a leaf: C
+  Set backlink of A to node 3 (D)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point @ ROOT: D
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+BC  Found bi component: C A B D
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+Depth First Index of E is 5
+Depth First Index of F is 6
+Depth First Index of H is 7
+Depth First Index of G is 8
+  Set backlink of G to node 4 (E)
+  Found a leaf: G
+Depth First Index of I is 9
+  Set backlink of I to node 7 (H)
+  Found a leaf: I
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: H
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+BC  Found bi component: I G H
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+  Set backlink of H to node 4 (E)
+  Set backlink of F to node 3 (D)
+  Set backlink of E to node 3 (D)
+
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+BC  Found bi component: H F E D
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+
+
+
+========================================================================================
+========================================================================================
+Graph 2, 1a on pg 261 of McConnell
+================================================
+=====Biconnected components starting at A
+================================================
+====Starting at A
+
+Depth First Index of A is 1
+Depth First Index of B is 2
+Depth First Index of E is 3
+Depth First Index of I is 4
+Depth First Index of F is 5
+Depth First Index of C is 6
+Depth First Index of J is 7
+Depth First Index of G is 8
+Depth First Index of D is 9
+Depth First Index of K is 10
+  Set backlink of K to node 9 (J)
+  Found a leaf: K
+  Set backlink of D to node 9 (J)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: J
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+BC  Found bi component: K D G J
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+  Set backlink of J to node 5 (F)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: F
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+BC  Found bi component: J C F
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+  Set backlink of F to node 1 (B)
+  Set backlink of I to node 1 (B)
+  Set backlink of E to node 0 (A)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point @ ROOT: A
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+BC  Found bi component: F I E B A
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+Depth First Index of H is 11
+  Set backlink of H to node 0 (A)
+  Found a leaf: H
+
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+BC  Found bi component: H A
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+
+
+================================================
+=====Biconnected components starting at F
+================================================
+====Starting at F
+
+Depth First Index of F is 1
+Depth First Index of B is 2
+Depth First Index of A is 3
+Depth First Index of E is 4
+Depth First Index of I is 5
+  Set backlink of I to node 5 (F)
+  Found a leaf: I
+  Set backlink of E to node 5 (F)
+Depth First Index of H is 6
+  Set backlink of H to node 0 (A)
+  Found a leaf: H
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: A
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+BC  Found bi component: H I E A
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+  Set backlink of A to node 5 (F)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point @ ROOT: F
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+BC  Found bi component: A B F
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+Depth First Index of C is 7
+Depth First Index of J is 8
+Depth First Index of G is 9
+Depth First Index of D is 10
+Depth First Index of K is 11
+  Set backlink of K to node 9 (J)
+  Found a leaf: K
+  Set backlink of D to node 9 (J)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: J
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+BC  Found bi component: K D G J
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+  Set backlink of J to node 5 (F)
+  Set backlink of C to node 5 (F)
+
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+BC  Found bi component: J C F
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+
+
+================================================
+=====Biconnected components starting at H
+================================================
+====Starting at H
+
+Depth First Index of H is 1
+Depth First Index of A is 2
+Depth First Index of B is 3
+Depth First Index of E is 4
+Depth First Index of I is 5
+Depth First Index of F is 6
+Depth First Index of C is 7
+Depth First Index of J is 8
+Depth First Index of G is 9
+Depth First Index of D is 10
+Depth First Index of K is 11
+  Set backlink of K to node 9 (J)
+  Found a leaf: K
+  Set backlink of D to node 9 (J)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: J
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+BC  Found bi component: K D G J
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+  Set backlink of J to node 5 (F)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: F
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+BC  Found bi component: J C F
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+  Set backlink of F to node 1 (B)
+  Set backlink of I to node 1 (B)
+  Set backlink of E to node 0 (A)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: A
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+BC  Found bi component: F I E B A
+BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+
+
+
+
+========================================================================================
+========================================================================================
+Graph 3, 1b on pg 261 of McConnell
+================================================
+=====Biconnected components starting at A
 ================================================
 ====Starting at A
 
@@ -66,6 +419,9 @@ BC  Found bi component: F B
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
+
+================================================
+=====Biconnected components starting at G
 ================================================
 ====Starting at G
 
@@ -141,6 +497,9 @@ BC  Found bi component: K F G
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
+
+================================================
+=====Biconnected components starting at F
 ================================================
 ====Starting at F
 

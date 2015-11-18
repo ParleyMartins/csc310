@@ -1,8 +1,6 @@
 package third_assignment;
 
-import java.io.FileNotFoundException;
 import java.io.PrintStream;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
@@ -19,13 +17,13 @@ public class Graph2015 {
 			Node node = new Node();
 			nodes[i] = node;
 		}
-		String FOLDER = "C:\\src\\csc310\\src";
-		String OUTPUT_FILE = FOLDER + "\\third_assignment\\output.txt";
-		try {
-			out = new PrintStream(OUTPUT_FILE, "UTF-8");
-		} catch (FileNotFoundException | UnsupportedEncodingException e) {
-			e.printStackTrace();
-		}
+//		String FOLDER = "C:\\src\\csc310\\src";
+//		String OUTPUT_FILE = FOLDER + "\\third_assignment\\output.txt";
+//		try {
+//			out = new PrintStream(OUTPUT_FILE, "UTF-8");
+//		} catch (FileNotFoundException | UnsupportedEncodingException e) {
+//			e.printStackTrace();
+//		}
 	}
 
 	public void addEdge(int node1, int node2) {
@@ -120,7 +118,8 @@ public class Graph2015 {
 				node.setArticulationPoint(true);
 				printArticulationPoint(node.getLabel(), node.isRoot());
 			}
-			printBiconnectedComponents(nodeId);
+//			biconnectedComponents.add(nodeId);
+//			printBiconnectedComponents(nodeId);
 		}
 	}
 
