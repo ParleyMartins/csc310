@@ -41,15 +41,15 @@ public class RHgraphTest {
         //**********First graph
         doGraph1();
 
-	//**********Second graph
-	System.out.println();
-	System.out.println();
-        doGraph2();
-        
-	//***********Third graph
-	System.out.println();
-	System.out.println();       
-        doGraph3();
+//	//**********Second graph
+//	System.out.println();
+//	System.out.println();
+//        doGraph2();
+//        
+//	//***********Third graph
+//	System.out.println();
+//	System.out.println();       
+//        doGraph3();
                 
     }//main
     

@@ -17,13 +17,13 @@ public class Graph2015 {
 			Node node = new Node();
 			nodes[i] = node;
 		}
-//		String FOLDER = "C:\\src\\csc310\\src";
-//		String OUTPUT_FILE = FOLDER + "\\third_assignment\\output.txt";
-//		try {
-//			out = new PrintStream(OUTPUT_FILE, "UTF-8");
-//		} catch (FileNotFoundException | UnsupportedEncodingException e) {
-//			e.printStackTrace();
-//		}
+		// String FOLDER = "C:\\src\\csc310\\src";
+		// String OUTPUT_FILE = FOLDER + "\\third_assignment\\output.txt";
+		// try {
+		// out = new PrintStream(OUTPUT_FILE, "UTF-8");
+		// } catch (FileNotFoundException | UnsupportedEncodingException e) {
+		// e.printStackTrace();
+		// }
 	}
 
 	public void addEdge(int node1, int node2) {
@@ -68,7 +68,7 @@ public class Graph2015 {
 		nodes[nodeId].color = Color.GREY;
 		setIndex(nodeId);
 		printIndex(nodeId);
-		int whiteNodes = 0;
+		int notWhiteNodes = 0;
 		int backlink = nodeId;
 		biconnectedComponents.add(nodeId);
 
@@ -76,16 +76,17 @@ public class Graph2015 {
 			if (nodes[nextNode].time < nodes[backlink].time)
 				backlink = nextNode;
 			if (nodes[nextNode].color == Color.WHITE) {
-				whiteNodes++;
 				int backreturn = depthFirstSearch(nextNode);
-				checkAP(nodeId, backreturn, whiteNodes);
+				checkAP(nodeId, backreturn, notWhiteNodes);
 				if (nodes[backreturn].time < nodes[backlink].time) {
 					backlink = backreturn;
 				}
+			} else {
+				notWhiteNodes++;
 			}
 		}
 		printBacklink(nodeId, backlink);
-		printLeaf(whiteNodes, nodeId);
+		printLeaf(notWhiteNodes, nodeId);
 		nodes[nodeId].color = Color.BLACK;
 		return backlink;
 	}
@@ -111,20 +112,25 @@ public class Graph2015 {
 		out.println(" is " + depthFirstIndex);
 	}
 
-	private void checkAP(int nodeId, int backlink, int whitenodes) {
+	private void checkAP(int nodeId, int backlink, int notWhiteNodes) {
 		Node node = nodes[nodeId];
-		if (nodeId == backlink && node.getEdges().size() != whitenodes) {
-			if (!node.isArticulationPoint()) {
+		if (nodeId == backlink) {// && node.getEdges().size() != notWhiteNodes)
+			if (node.isRoot()) {
+				if (notWhiteNodes > 0) {
+					node.setArticulationPoint(true);
+					printArticulationPoint(node.getLabel(), node.isRoot());
+				}
+			} else if (!node.isArticulationPoint()) {
 				node.setArticulationPoint(true);
 				printArticulationPoint(node.getLabel(), node.isRoot());
 			}
-//			biconnectedComponents.add(nodeId);
-//			printBiconnectedComponents(nodeId);
+			// biconnectedComponents.add(nodeId);
+			// printBiconnectedComponents(nodeId);
 		}
 	}
 
-	private void printLeaf(int whiteNodes, int nodeId) {
-		if (whiteNodes == 0) {
+	private void printLeaf(int notWhiteNodes, int nodeId) {
+		if (notWhiteNodes == nodes[nodeId].getEdges().size()) {
 			out.println("  Found a leaf: " + nodes[nodeId].getLabel());
 		}
 	}
