@@ -34,6 +34,15 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
   Set backlink of G to node 5 (F)
   Set backlink of E to node 5 (F)
 
+C
+A
+B
+I
+H
+G
+E
+D
+F
 
 ================================================
 =====Biconnected components starting at A
@@ -68,6 +77,15 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
   Set backlink of D to node 1 (B)
   Set backlink of C to node 0 (A)
 
+G
+I
+H
+F
+E
+D
+C
+B
+A
 
 ================================================
 =====Biconnected components starting at D
@@ -81,6 +99,11 @@ Depth First Index of C is 4
   Set backlink of C to node 3 (D)
   Found a leaf: C
   Set backlink of A to node 3 (D)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point @ ROOT: D
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
 Depth First Index of E is 5
 Depth First Index of F is 6
 Depth First Index of H is 7
@@ -99,8 +122,354 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
   Set backlink of F to node 3 (D)
   Set backlink of E to node 3 (D)
 
+C
+A
+B
+G
+I
+H
+F
+E
+D
+
+
+========================================================================================
+========================================================================================
+Graph 2, 1a on pg 261 of McConnell
+================================================
+=====Biconnected components starting at A
+================================================
+====Starting at A
+
+Depth First Index of A is 1
+Depth First Index of B is 2
+Depth First Index of E is 3
+Depth First Index of I is 4
+Depth First Index of F is 5
+Depth First Index of C is 6
+Depth First Index of J is 7
+Depth First Index of G is 8
+Depth First Index of D is 9
+Depth First Index of K is 10
+  Set backlink of K to node 9 (J)
+  Found a leaf: K
+  Set backlink of D to node 9 (J)
+
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
-AP  Found Articulation Point @ ROOT: D
+AP  Found Articulation Point: J
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+  Set backlink of J to node 5 (F)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: F
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+  Set backlink of F to node 1 (B)
+  Set backlink of I to node 1 (B)
+  Set backlink of E to node 0 (A)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point @ ROOT: A
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+Depth First Index of H is 11
+  Set backlink of H to node 0 (A)
+  Found a leaf: H
+
+K
+D
+G
+J
+C
+F
+I
+E
+B
+H
+A
+
+================================================
+=====Biconnected components starting at F
+================================================
+====Starting at F
+
+Depth First Index of F is 1
+Depth First Index of B is 2
+Depth First Index of A is 3
+Depth First Index of E is 4
+Depth First Index of I is 5
+  Set backlink of I to node 5 (F)
+  Found a leaf: I
+  Set backlink of E to node 5 (F)
+Depth First Index of H is 6
+  Set backlink of H to node 0 (A)
+  Found a leaf: H
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: A
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+  Set backlink of A to node 5 (F)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point @ ROOT: F
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+Depth First Index of C is 7
+Depth First Index of J is 8
+Depth First Index of G is 9
+Depth First Index of D is 10
+Depth First Index of K is 11
+  Set backlink of K to node 9 (J)
+  Found a leaf: K
+  Set backlink of D to node 9 (J)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: J
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+  Set backlink of J to node 5 (F)
+  Set backlink of C to node 5 (F)
+
+I
+E
+H
+A
+B
+K
+D
+G
+J
+C
+F
+
+================================================
+=====Biconnected components starting at H
+================================================
+====Starting at H
+
+Depth First Index of H is 1
+Depth First Index of A is 2
+Depth First Index of B is 3
+Depth First Index of E is 4
+Depth First Index of I is 5
+Depth First Index of F is 6
+Depth First Index of C is 7
+Depth First Index of J is 8
+Depth First Index of G is 9
+Depth First Index of D is 10
+Depth First Index of K is 11
+  Set backlink of K to node 9 (J)
+  Found a leaf: K
+  Set backlink of D to node 9 (J)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: J
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+  Set backlink of J to node 5 (F)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: F
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+  Set backlink of F to node 1 (B)
+  Set backlink of I to node 1 (B)
+  Set backlink of E to node 0 (A)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: A
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
+K
+D
+G
+J
+C
+F
+I
+E
+B
+A
+H
+
+
+========================================================================================
+========================================================================================
+Graph 3, 1b on pg 261 of McConnell
+================================================
+=====Biconnected components starting at A
+================================================
+====Starting at A
+
+Depth First Index of A is 1
+Depth First Index of B is 2
+Depth First Index of F is 3
+Depth First Index of E is 4
+Depth First Index of I is 5
+Depth First Index of J is 6
+  Set backlink of J to node 5 (F)
+  Found a leaf: J
+  Set backlink of I to node 5 (F)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: F
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+Depth First Index of G is 7
+Depth First Index of C is 8
+Depth First Index of D is 9
+Depth First Index of H is 10
+  Set backlink of H to node 2 (C)
+  Found a leaf: H
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: C
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: G
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+Depth First Index of K is 11
+  Set backlink of K to node 5 (F)
+  Found a leaf: K
+  Set backlink of G to node 5 (F)
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: B
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+J
+I
+E
+H
+D
+C
+K
+G
+F
+B
+A
+
+================================================
+=====Biconnected components starting at G
+================================================
+====Starting at G
+
+Depth First Index of G is 1
+Depth First Index of C is 2
+Depth First Index of D is 3
+Depth First Index of H is 4
+  Set backlink of H to node 2 (C)
+  Found a leaf: H
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: C
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point @ ROOT: G
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+Depth First Index of F is 5
+Depth First Index of B is 6
+Depth First Index of A is 7
+  Found a leaf: A
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: B
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: F
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+Depth First Index of E is 8
+Depth First Index of I is 9
+Depth First Index of J is 10
+  Set backlink of J to node 5 (F)
+  Found a leaf: J
+  Set backlink of I to node 5 (F)
+  Set backlink of E to node 5 (F)
+Depth First Index of K is 11
+  Set backlink of K to node 6 (G)
+  Found a leaf: K
+  Set backlink of F to node 6 (G)
+
+H
+D
+C
+A
+B
+J
+I
+E
+K
+F
+G
+
+================================================
+=====Biconnected components starting at F
+================================================
+====Starting at F
+
+Depth First Index of F is 1
+Depth First Index of B is 2
+Depth First Index of A is 3
+  Found a leaf: A
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: B
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point @ ROOT: F
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+Depth First Index of E is 4
+Depth First Index of I is 5
+Depth First Index of J is 6
+  Set backlink of J to node 5 (F)
+  Found a leaf: J
+  Set backlink of I to node 5 (F)
+  Set backlink of E to node 5 (F)
+Depth First Index of G is 7
+Depth First Index of C is 8
+Depth First Index of D is 9
+Depth First Index of H is 10
+  Set backlink of H to node 2 (C)
+  Found a leaf: H
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: C
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+AP  Found Articulation Point: G
+APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
+
+Depth First Index of K is 11
+  Set backlink of K to node 5 (F)
+  Found a leaf: K
+  Set backlink of G to node 5 (F)
+
+A
+B
+J
+I
+E
+H
+D
+C
+K
+G
+F

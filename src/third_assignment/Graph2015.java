@@ -3,6 +3,7 @@ package third_assignment;
 import java.io.PrintStream;
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.Iterator;
 
 public class Graph2015 {
 	private Node[] nodes;
@@ -49,6 +50,10 @@ public class Graph2015 {
 			i = i % nodes.length;
 		} while (i != root);
 		out.println();
+		for (Iterator iterator = biconnectedComponents.iterator(); iterator.hasNext();) {
+			Integer integer = (Integer) iterator.next();
+			out.println(nodes[integer]);
+		}
 	}
 
 	private void initialConditions() {
@@ -57,6 +62,7 @@ public class Graph2015 {
 			nodes[i].time = Integer.MAX_VALUE;
 			nodes[i].setArticulationPoint(false);
 		}
+		biconnectedComponents.clear();
 		depthFirstIndex = 0;
 	}
 
@@ -70,14 +76,14 @@ public class Graph2015 {
 		printIndex(nodeId);
 		int notWhiteNodes = 0;
 		int backlink = nodeId;
-		biconnectedComponents.add(nodeId);
 
 		for (int nextNode : nodes[nodeId].getEdges()) {
 			if (nodes[nextNode].time < nodes[backlink].time)
 				backlink = nextNode;
 			if (nodes[nextNode].color == Color.WHITE) {
 				int backreturn = depthFirstSearch(nextNode);
-				checkAP(nodeId, backreturn, notWhiteNodes);
+				// notWhiteNodes++;
+				checkAP(nodeId, backreturn);
 				if (nodes[backreturn].time < nodes[backlink].time) {
 					backlink = backreturn;
 				}
@@ -88,6 +94,7 @@ public class Graph2015 {
 		printBacklink(nodeId, backlink);
 		printLeaf(notWhiteNodes, nodeId);
 		nodes[nodeId].color = Color.BLACK;
+		biconnectedComponents.add(nodeId);
 		return backlink;
 	}
 
@@ -112,19 +119,29 @@ public class Graph2015 {
 		out.println(" is " + depthFirstIndex);
 	}
 
-	private void checkAP(int nodeId, int backlink, int notWhiteNodes) {
+	private void checkAP(int nodeId, int backlink) {
 		Node node = nodes[nodeId];
 		if (nodeId == backlink) {// && node.getEdges().size() != notWhiteNodes)
-			if (node.isRoot()) {
-				if (notWhiteNodes > 0) {
+			if (!node.isArticulationPoint()) {
+				if (node.isRoot()) {
+					int whiteNodes = 0;
+					for (int edge : node.getEdges()) {
+						if (nodes[edge].color == Color.WHITE) {
+							whiteNodes++;
+							break;
+						}
+					}
+					if (whiteNodes > 0) {
+						node.setArticulationPoint(true);
+						printArticulationPoint(node.getLabel(), node.isRoot());
+					}
+				} else {
 					node.setArticulationPoint(true);
 					printArticulationPoint(node.getLabel(), node.isRoot());
 				}
-			} else if (!node.isArticulationPoint()) {
-				node.setArticulationPoint(true);
-				printArticulationPoint(node.getLabel(), node.isRoot());
+
+				 biconnectedComponents.add(nodeId);
 			}
-			// biconnectedComponents.add(nodeId);
 			// printBiconnectedComponents(nodeId);
 		}
 	}
@@ -157,6 +174,6 @@ public class Graph2015 {
 		out.println(nodes[biconnectedComponents.removeLast()].getLabel());
 		out.println("BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC");
 		out.println();
-		biconnectedComponents.add(nodeId);
+//		biconnectedComponents.add(nodeId);
 	}
 }
