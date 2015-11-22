@@ -3,7 +3,6 @@ package third_assignment;
 import java.io.PrintStream;
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.Iterator;
 
 public class Graph2015 {
 	private Node[] nodes;
@@ -39,9 +38,6 @@ public class Graph2015 {
 	public void biConnect(int root) {
 		initialConditions();
 		int i = root;
-		out.println("================================================");
-		out.println("====Starting at " + nodes[i].getLabel());
-		out.println();
 		do {
 			if (nodes[i].color == Color.WHITE) {
 				depthFirstSearch(i);
@@ -49,11 +45,10 @@ public class Graph2015 {
 			i++;
 			i = i % nodes.length;
 		} while (i != root);
-		out.println();
-		for (Iterator iterator = biconnectedComponents.iterator(); iterator.hasNext();) {
-			Integer integer = (Integer) iterator.next();
-			out.println(nodes[integer]);
-		}
+		// while (biconnectedComponents.peek() != null) {
+		// int a = biconnectedComponents.poll();
+		// out.println(nodes[a]);
+		// }
 	}
 
 	private void initialConditions() {
@@ -70,19 +65,20 @@ public class Graph2015 {
 		return nodes;
 	}
 
-	private int depthFirstSearch(int nodeId) {
+	private int depthFirstSearch(Integer nodeId) {
 		nodes[nodeId].color = Color.GREY;
 		setIndex(nodeId);
 		printIndex(nodeId);
 		int notWhiteNodes = 0;
 		int backlink = nodeId;
 
+
 		for (int nextNode : nodes[nodeId].getEdges()) {
 			if (nodes[nextNode].time < nodes[backlink].time)
 				backlink = nextNode;
 			if (nodes[nextNode].color == Color.WHITE) {
 				int backreturn = depthFirstSearch(nextNode);
-				// notWhiteNodes++;
+				biconnectedComponents.add(nodeId);
 				checkAP(nodeId, backreturn);
 				if (nodes[backreturn].time < nodes[backlink].time) {
 					backlink = backreturn;
@@ -91,10 +87,11 @@ public class Graph2015 {
 				notWhiteNodes++;
 			}
 		}
+//		if(biconnectedComponents.peekLast() != nodeId)
+			biconnectedComponents.add(nodeId);
 		printBacklink(nodeId, backlink);
 		printLeaf(notWhiteNodes, nodeId);
 		nodes[nodeId].color = Color.BLACK;
-		biconnectedComponents.add(nodeId);
 		return backlink;
 	}
 
@@ -121,17 +118,11 @@ public class Graph2015 {
 
 	private void checkAP(int nodeId, int backlink) {
 		Node node = nodes[nodeId];
-		if (nodeId == backlink) {// && node.getEdges().size() != notWhiteNodes)
-			if (!node.isArticulationPoint()) {
-				if (node.isRoot()) {
-					int whiteNodes = 0;
-					for (int edge : node.getEdges()) {
-						if (nodes[edge].color == Color.WHITE) {
-							whiteNodes++;
-							break;
-						}
-					}
-					if (whiteNodes > 0) {
+		if (nodeId == backlink) {// Is this node the backlink?
+			if (!node.isArticulationPoint()) { // Have I done this before?
+				if (node.isRoot()) { // Special case
+					boolean hasWhiteNodes = checkWhiteNodes(nodeId);
+					if (hasWhiteNodes) {
 						node.setArticulationPoint(true);
 						printArticulationPoint(node.getLabel(), node.isRoot());
 					}
@@ -139,11 +130,18 @@ public class Graph2015 {
 					node.setArticulationPoint(true);
 					printArticulationPoint(node.getLabel(), node.isRoot());
 				}
-
-				 biconnectedComponents.add(nodeId);
 			}
-			// printBiconnectedComponents(nodeId);
+			printBiconnectedComponents(nodeId);
 		}
+	}
+
+	private boolean checkWhiteNodes(int nodeId) {
+		for (int edge : nodes[nodeId].getEdges()) {
+			if (nodes[edge].color == Color.WHITE) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	private void printLeaf(int notWhiteNodes, int nodeId) {
@@ -167,13 +165,13 @@ public class Graph2015 {
 		out.println();
 		out.println("BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC");
 		out.print("BC  Found bi component: ");
+		Integer index = biconnectedComponents.pollLast();
 		do {
-			int index = biconnectedComponents.removeLast();
 			out.print(nodes[index].getLabel() + " ");
-		} while (biconnectedComponents.peekLast() != nodeId);
-		out.println(nodes[biconnectedComponents.removeLast()].getLabel());
+			index = biconnectedComponents.pollLast();
+		} while (index != null &&index != nodeId);
+		out.println();
 		out.println("BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC");
 		out.println();
-//		biconnectedComponents.add(nodeId);
 	}
 }
