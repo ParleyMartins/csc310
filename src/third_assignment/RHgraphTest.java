@@ -220,7 +220,7 @@ public class RHgraphTest {
 //		System.out.println();
 //		System.out.println("================================================");
 //		System.out.println("=====Biconnected components starting at F");
-//		myGraph3.biConnect(5); // find APs starting at F
+//		myGraph3.biConnect(7); // find APs starting at F
 		
 		for (int i = 0; i < myGraph3.getNodes().length; i++) {
 			System.out.println("================================================");

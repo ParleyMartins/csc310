@@ -45,10 +45,10 @@ public class Graph2015 {
 			i++;
 			i = i % nodes.length;
 		} while (i != root);
-		// while (biconnectedComponents.peek() != null) {
-		// int a = biconnectedComponents.poll();
-		// out.println(nodes[a]);
-		// }
+//		 while (biconnectedComponents.peekLast() != null) {
+//		 int a = biconnectedComponents.pollLast();
+//		 out.println(nodes[a]);
+//		 }
 	}
 
 	private void initialConditions() {
@@ -65,14 +65,15 @@ public class Graph2015 {
 		return nodes;
 	}
 
-	private int depthFirstSearch(Integer nodeId) {
+	private int depthFirstSearch(int nodeId) {
 		nodes[nodeId].color = Color.GREY;
 		setIndex(nodeId);
 		printIndex(nodeId);
 		int notWhiteNodes = 0;
 		int backlink = nodeId;
 
-
+//		if(biconnectedComponents.peekLast() != nodeId)
+			biconnectedComponents.add(nodeId);
 		for (int nextNode : nodes[nodeId].getEdges()) {
 			if (nodes[nextNode].time < nodes[backlink].time)
 				backlink = nextNode;
@@ -87,8 +88,7 @@ public class Graph2015 {
 				notWhiteNodes++;
 			}
 		}
-//		if(biconnectedComponents.peekLast() != nodeId)
-			biconnectedComponents.add(nodeId);
+
 		printBacklink(nodeId, backlink);
 		printLeaf(notWhiteNodes, nodeId);
 		nodes[nodeId].color = Color.BLACK;
@@ -170,6 +170,7 @@ public class Graph2015 {
 			out.print(nodes[index].getLabel() + " ");
 			index = biconnectedComponents.pollLast();
 		} while (index != null &&index != nodeId);
+		biconnectedComponents.addLast(index);
 		out.println();
 		out.println("BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC");
 		out.println();
