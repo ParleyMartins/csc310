@@ -86,9 +86,7 @@ public class Graph2015 {
 	 */
 	private void initialConditions() {
 		for (int i = 0; i < nodes.length; i++) {
-			nodes[i].color = Color.WHITE;
-			nodes[i].time = Integer.MAX_VALUE;
-			nodes[i].setArticulationPoint(false);
+			nodes[i].resetNode();
 		}
 		biconnectedComponents.clear();
 		depthFirstIndex = 0;
@@ -125,8 +123,8 @@ public class Graph2015 {
 				backlink = nextNode;
 			if (nodes[nextNode].color == Color.WHITE) {
 				whiteNodes++;
+				nodes[nextNode].parent = nodeId;
 				int backreturn = depthFirstSearch(nextNode);
-				biconnectedComponents.add(nodeId);
 				checkAP(nodeId, backreturn);
 				if (nodes[backreturn].time < nodes[backlink].time) {
 					backlink = backreturn;
@@ -149,16 +147,14 @@ public class Graph2015 {
 	 *            The backlink value.
 	 */
 	private void printBacklink(int nodeId, int backlink) {
-		int timeNode = nodes[nodeId].time;
-		int timeBack = nodes[backlink].time;
 		/*
 		 * This comparison is made for printing purposes only
 		 */
-		if (nodeId != backlink && timeNode != timeBack + 1) {
+		if (backlink != nodeId && nodes[nodeId].parent != backlink) {
 			String labelNode = nodes[nodeId].getLabel();
 			String labelBack = nodes[backlink].getLabel();
 			out.print("  Set backlink of " + labelNode);
-			out.println(" to node " + backlink + " (" + labelBack + ")");
+			out.println(" to " + nodes[backlink].time + " (" + labelBack + ")");
 		}
 	}
 
@@ -237,8 +233,8 @@ public class Graph2015 {
 	 *            The node id to be checked.
 	 */
 	private void checkAndPrintLeaf(int whiteNodesAmount, int nodeId) {
-		if (whiteNodesAmount == 0) {// If the node has no white nodes, it's a
-									// leaf
+		// If the node has no white nodes, it's a leaf
+		if (whiteNodesAmount == 0) {
 			out.println("  Found a leaf: " + nodes[nodeId].getLabel());
 		}
 	}
@@ -283,6 +279,7 @@ public class Graph2015 {
 		 * do that because it's less complexity than peeking and polling every
 		 * time.
 		 */
+		out.print(nodes[index].getLabel() + " ");
 		biconnectedComponents.addLast(index);
 		out.println();
 		out.println("BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC");

@@ -1,6 +1,7 @@
 package third_assignment;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Class to represent the nodes of a graph. It stores the label, if this node is
@@ -12,10 +13,11 @@ import java.util.ArrayList;
 public class Node {
 	private String label;
 	private boolean articulationPoint;
-	private ArrayList<Integer> edges;
+	private List<Integer> edges;
 	public Color color;
 	public int time;
-
+	public int parent;
+	
 	/**
 	 * Constructs a node object without a given label
 	 */
@@ -31,7 +33,7 @@ public class Node {
 	 */
 	public Node(String label) {
 		this.label = label;
-		edges = new ArrayList<>();
+		edges = new LinkedList<Integer>();
 		color = Color.WHITE;
 		time = Integer.MAX_VALUE;
 	}
@@ -89,7 +91,7 @@ public class Node {
 	 * 
 	 * @return An ArrayList with all the edges
 	 */
-	public ArrayList<Integer> getEdges() {
+	public List<Integer> getEdges() {
 		return edges;
 	}
 
@@ -101,7 +103,13 @@ public class Node {
 	public boolean isRoot() {
 		return time == 1;
 	}
-
+	
+	public void resetNode(){
+		color = Color.WHITE;
+		time = Integer.MAX_VALUE;
+		setArticulationPoint(false);
+	}
+	
 	/**
 	 * Returns the content of the node as a string
 	 */
