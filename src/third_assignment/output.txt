@@ -12,10 +12,9 @@ Depth First Index of E is 5
 Depth First Index of F is 6
 Depth First Index of H is 7
 Depth First Index of G is 8
-  Set backlink of G to node 4 (E)
+  Set backlink of G to 5 (E)
   Found a leaf: G
 Depth First Index of I is 9
-  Set backlink of I to node 7 (H)
   Found a leaf: I
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -27,8 +26,8 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 BC  Found bi component: H I 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of H to node 4 (E)
-  Set backlink of F to node 3 (D)
+  Set backlink of H to 5 (E)
+  Set backlink of F to 4 (D)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: D
@@ -36,14 +35,14 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: D E E F F H G 
+BC  Found bi component: D E F H G H F E 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of D to node 1 (B)
-  Set backlink of C to node 0 (A)
+  Set backlink of D to 2 (B)
+  Set backlink of C to 1 (A)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: A B B C C D 
+BC  Found bi component: A B C D C B 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -62,10 +61,9 @@ Depth First Index of E is 5
 Depth First Index of F is 6
 Depth First Index of H is 7
 Depth First Index of G is 8
-  Set backlink of G to node 4 (E)
+  Set backlink of G to 5 (E)
   Found a leaf: G
 Depth First Index of I is 9
-  Set backlink of I to node 7 (H)
   Found a leaf: I
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -77,8 +75,8 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 BC  Found bi component: H I 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of H to node 4 (E)
-  Set backlink of F to node 3 (D)
+  Set backlink of H to 5 (E)
+  Set backlink of F to 4 (D)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: D
@@ -86,14 +84,14 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: D E E F F H G 
+BC  Found bi component: D E F H G H F E 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of D to node 1 (B)
-  Set backlink of C to node 1 (B)
+  Set backlink of D to 1 (B)
+  Set backlink of C to 1 (B)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: B A A C C D 
+BC  Found bi component: B A C D C A 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -112,10 +110,9 @@ Depth First Index of E is 5
 Depth First Index of F is 6
 Depth First Index of H is 7
 Depth First Index of G is 8
-  Set backlink of G to node 4 (E)
+  Set backlink of G to 5 (E)
   Found a leaf: G
 Depth First Index of I is 9
-  Set backlink of I to node 7 (H)
   Found a leaf: I
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -127,8 +124,8 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 BC  Found bi component: H I 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of H to node 4 (E)
-  Set backlink of F to node 3 (D)
+  Set backlink of H to 5 (E)
+  Set backlink of F to 4 (D)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: D
@@ -136,14 +133,14 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: D E E F F H G 
+BC  Found bi component: D E F H G H F E 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of D to node 2 (C)
-  Set backlink of B to node 2 (C)
+  Set backlink of D to 1 (C)
+  Set backlink of B to 1 (C)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: C A A B B D 
+BC  Found bi component: C A B D B A 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -158,9 +155,9 @@ Depth First Index of D is 1
 Depth First Index of B is 2
 Depth First Index of A is 3
 Depth First Index of C is 4
-  Set backlink of C to node 3 (D)
+  Set backlink of C to 1 (D)
   Found a leaf: C
-  Set backlink of A to node 3 (D)
+  Set backlink of A to 1 (D)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point @ ROOT: D
@@ -168,17 +165,16 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: D B B A A C 
+BC  Found bi component: D B A C A B 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of E is 5
 Depth First Index of F is 6
 Depth First Index of H is 7
 Depth First Index of G is 8
-  Set backlink of G to node 4 (E)
+  Set backlink of G to 5 (E)
   Found a leaf: G
 Depth First Index of I is 9
-  Set backlink of I to node 7 (H)
   Found a leaf: I
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -190,12 +186,11 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 BC  Found bi component: H I 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of H to node 4 (E)
-  Set backlink of F to node 3 (D)
-  Set backlink of E to node 3 (D)
+  Set backlink of H to 5 (E)
+  Set backlink of F to 1 (D)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: D E E F F H G 
+BC  Found bi component: D E F H G H F E 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -211,9 +206,9 @@ Depth First Index of D is 2
 Depth First Index of B is 3
 Depth First Index of A is 4
 Depth First Index of C is 5
-  Set backlink of C to node 3 (D)
+  Set backlink of C to 2 (D)
   Found a leaf: C
-  Set backlink of A to node 3 (D)
+  Set backlink of A to 2 (D)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: D
@@ -221,16 +216,15 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: D B B A A C 
+BC  Found bi component: D B A C A B 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of F is 6
 Depth First Index of H is 7
 Depth First Index of G is 8
-  Set backlink of G to node 4 (E)
+  Set backlink of G to 1 (E)
   Found a leaf: G
 Depth First Index of I is 9
-  Set backlink of I to node 7 (H)
   Found a leaf: I
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -242,11 +236,11 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 BC  Found bi component: H I 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of H to node 4 (E)
-  Set backlink of F to node 4 (E)
+  Set backlink of H to 1 (E)
+  Set backlink of F to 1 (E)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: E D D F F H G 
+BC  Found bi component: E D F H G H F D 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -262,9 +256,9 @@ Depth First Index of D is 2
 Depth First Index of B is 3
 Depth First Index of A is 4
 Depth First Index of C is 5
-  Set backlink of C to node 3 (D)
+  Set backlink of C to 2 (D)
   Found a leaf: C
-  Set backlink of A to node 3 (D)
+  Set backlink of A to 2 (D)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: D
@@ -272,7 +266,7 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: D B B A A C 
+BC  Found bi component: D B A C A B 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of E is 6
@@ -290,12 +284,12 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 BC  Found bi component: H I 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of H to node 5 (F)
-  Set backlink of G to node 5 (F)
-  Set backlink of E to node 5 (F)
+  Set backlink of H to 1 (F)
+  Set backlink of G to 1 (F)
+  Set backlink of E to 1 (F)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F D D E E G G H 
+BC  Found bi component: F D E G H G E D 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -312,9 +306,9 @@ Depth First Index of D is 3
 Depth First Index of B is 4
 Depth First Index of A is 5
 Depth First Index of C is 6
-  Set backlink of C to node 3 (D)
+  Set backlink of C to 3 (D)
   Found a leaf: C
-  Set backlink of A to node 3 (D)
+  Set backlink of A to 3 (D)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: D
@@ -322,7 +316,7 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: D B B A A C 
+BC  Found bi component: D B A C A B 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of F is 7
@@ -339,12 +333,12 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 BC  Found bi component: H I 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of H to node 6 (G)
-  Set backlink of F to node 6 (G)
-  Set backlink of D to node 6 (G)
+  Set backlink of H to 1 (G)
+  Set backlink of F to 1 (G)
+  Set backlink of D to 1 (G)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: G E E D D F F H 
+BC  Found bi component: G E D F H F D E 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -361,9 +355,9 @@ Depth First Index of D is 3
 Depth First Index of B is 4
 Depth First Index of A is 5
 Depth First Index of C is 6
-  Set backlink of C to node 3 (D)
+  Set backlink of C to 3 (D)
   Found a leaf: C
-  Set backlink of A to node 3 (D)
+  Set backlink of A to 3 (D)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: D
@@ -371,15 +365,15 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: D B B A A C 
+BC  Found bi component: D B A C A B 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of E is 7
 Depth First Index of G is 8
-  Set backlink of G to node 7 (H)
+  Set backlink of G to 1 (H)
   Found a leaf: G
-  Set backlink of E to node 7 (H)
-  Set backlink of D to node 7 (H)
+  Set backlink of E to 1 (H)
+  Set backlink of D to 1 (H)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point @ ROOT: H
@@ -387,11 +381,10 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: H F F D D E E G 
+BC  Found bi component: H F D E G E D F 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of I is 9
-  Set backlink of I to node 7 (H)
   Found a leaf: I
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
@@ -413,9 +406,9 @@ Depth First Index of D is 4
 Depth First Index of B is 5
 Depth First Index of A is 6
 Depth First Index of C is 7
-  Set backlink of C to node 3 (D)
+  Set backlink of C to 4 (D)
   Found a leaf: C
-  Set backlink of A to node 3 (D)
+  Set backlink of A to 4 (D)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: D
@@ -423,15 +416,15 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: D B B A A C 
+BC  Found bi component: D B A C A B 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of E is 8
 Depth First Index of G is 9
-  Set backlink of G to node 7 (H)
+  Set backlink of G to 2 (H)
   Found a leaf: G
-  Set backlink of E to node 7 (H)
-  Set backlink of D to node 7 (H)
+  Set backlink of E to 2 (H)
+  Set backlink of D to 2 (H)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: H
@@ -439,7 +432,7 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: H F F D D E E G 
+BC  Found bi component: H F D E G E D F 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -470,9 +463,9 @@ Depth First Index of J is 7
 Depth First Index of G is 8
 Depth First Index of D is 9
 Depth First Index of K is 10
-  Set backlink of K to node 9 (J)
+  Set backlink of K to 7 (J)
   Found a leaf: K
-  Set backlink of D to node 9 (J)
+  Set backlink of D to 7 (J)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: J
@@ -480,10 +473,10 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: J G G D D K 
+BC  Found bi component: J G D K D G 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of J to node 5 (F)
+  Set backlink of J to 5 (F)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: F
@@ -491,12 +484,12 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F C C J 
+BC  Found bi component: F C J C 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of F to node 1 (B)
-  Set backlink of I to node 1 (B)
-  Set backlink of E to node 0 (A)
+  Set backlink of F to 2 (B)
+  Set backlink of I to 2 (B)
+  Set backlink of E to 1 (A)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point @ ROOT: A
@@ -504,11 +497,10 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: A B B E E I I F 
+BC  Found bi component: A B E I F I E B 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of H is 11
-  Set backlink of H to node 0 (A)
   Found a leaf: H
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
@@ -527,9 +519,9 @@ Depth First Index of J is 7
 Depth First Index of G is 8
 Depth First Index of D is 9
 Depth First Index of K is 10
-  Set backlink of K to node 9 (J)
+  Set backlink of K to 7 (J)
   Found a leaf: K
-  Set backlink of D to node 9 (J)
+  Set backlink of D to 7 (J)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: J
@@ -537,10 +529,10 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: J G G D D K 
+BC  Found bi component: J G D K D G 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of J to node 5 (F)
+  Set backlink of J to 5 (F)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: F
@@ -548,14 +540,13 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F C C J 
+BC  Found bi component: F C J C 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of F to node 1 (B)
-  Set backlink of I to node 1 (B)
-  Set backlink of E to node 1 (B)
+  Set backlink of F to 1 (B)
+  Set backlink of I to 1 (B)
+  Set backlink of E to 1 (B)
 Depth First Index of H is 11
-  Set backlink of H to node 0 (A)
   Found a leaf: H
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -569,7 +560,7 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: B A E E I I F 
+BC  Found bi component: B A E I F I E A 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 ================================================
@@ -580,11 +571,10 @@ Depth First Index of B is 3
 Depth First Index of A is 4
 Depth First Index of E is 5
 Depth First Index of I is 6
-  Set backlink of I to node 5 (F)
+  Set backlink of I to 2 (F)
   Found a leaf: I
-  Set backlink of E to node 5 (F)
+  Set backlink of E to 2 (F)
 Depth First Index of H is 7
-  Set backlink of H to node 0 (A)
   Found a leaf: H
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -596,7 +586,7 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 BC  Found bi component: A H 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of A to node 5 (F)
+  Set backlink of A to 2 (F)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: F
@@ -604,16 +594,16 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F B B A E E I 
+BC  Found bi component: F B A E I E A B 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of J is 8
 Depth First Index of G is 9
 Depth First Index of D is 10
 Depth First Index of K is 11
-  Set backlink of K to node 9 (J)
+  Set backlink of K to 8 (J)
   Found a leaf: K
-  Set backlink of D to node 9 (J)
+  Set backlink of D to 8 (J)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: J
@@ -621,13 +611,13 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: J G G D D K 
+BC  Found bi component: J G D K D G 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of J to node 2 (C)
+  Set backlink of J to 1 (C)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: C F F J 
+BC  Found bi component: C F J F 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 ================================================
@@ -641,11 +631,10 @@ Depth First Index of B is 6
 Depth First Index of A is 7
 Depth First Index of E is 8
 Depth First Index of I is 9
-  Set backlink of I to node 5 (F)
+  Set backlink of I to 5 (F)
   Found a leaf: I
-  Set backlink of E to node 5 (F)
+  Set backlink of E to 5 (F)
 Depth First Index of H is 10
-  Set backlink of H to node 0 (A)
   Found a leaf: H
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -657,7 +646,7 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 BC  Found bi component: A H 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of A to node 5 (F)
+  Set backlink of A to 5 (F)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: F
@@ -665,10 +654,10 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F B B A E E I 
+BC  Found bi component: F B A E I E A B 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of F to node 9 (J)
+  Set backlink of F to 3 (J)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: J
@@ -676,16 +665,16 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: J C C F 
+BC  Found bi component: J C F C 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of K is 11
-  Set backlink of K to node 3 (D)
+  Set backlink of K to 1 (D)
   Found a leaf: K
-  Set backlink of J to node 3 (D)
+  Set backlink of J to 1 (D)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: D G G J J K 
+BC  Found bi component: D G J K J G 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 ================================================
@@ -699,9 +688,9 @@ Depth First Index of J is 6
 Depth First Index of G is 7
 Depth First Index of D is 8
 Depth First Index of K is 9
-  Set backlink of K to node 9 (J)
+  Set backlink of K to 6 (J)
   Found a leaf: K
-  Set backlink of D to node 9 (J)
+  Set backlink of D to 6 (J)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: J
@@ -709,10 +698,10 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: J G G D D K 
+BC  Found bi component: J G D K D G 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of J to node 5 (F)
+  Set backlink of J to 4 (F)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: F
@@ -720,16 +709,15 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F C C J 
+BC  Found bi component: F C J C 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of I is 10
-  Set backlink of I to node 4 (E)
+  Set backlink of I to 1 (E)
   Found a leaf: I
-  Set backlink of F to node 4 (E)
-  Set backlink of B to node 4 (E)
+  Set backlink of F to 1 (E)
+  Set backlink of B to 1 (E)
 Depth First Index of H is 11
-  Set backlink of H to node 0 (A)
   Found a leaf: H
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -743,7 +731,7 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: E A B B F F I 
+BC  Found bi component: E A B F I F B A 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 ================================================
@@ -753,11 +741,10 @@ Depth First Index of B is 2
 Depth First Index of A is 3
 Depth First Index of E is 4
 Depth First Index of I is 5
-  Set backlink of I to node 5 (F)
+  Set backlink of I to 1 (F)
   Found a leaf: I
-  Set backlink of E to node 5 (F)
+  Set backlink of E to 1 (F)
 Depth First Index of H is 6
-  Set backlink of H to node 0 (A)
   Found a leaf: H
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -769,7 +756,7 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 BC  Found bi component: A H 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of A to node 5 (F)
+  Set backlink of A to 1 (F)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point @ ROOT: F
@@ -777,7 +764,7 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F B B A E E I 
+BC  Found bi component: F B A E I E A B 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of C is 7
@@ -785,9 +772,9 @@ Depth First Index of J is 8
 Depth First Index of G is 9
 Depth First Index of D is 10
 Depth First Index of K is 11
-  Set backlink of K to node 9 (J)
+  Set backlink of K to 8 (J)
   Found a leaf: K
-  Set backlink of D to node 9 (J)
+  Set backlink of D to 8 (J)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: J
@@ -795,14 +782,13 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: J G G D D K 
+BC  Found bi component: J G D K D G 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of J to node 5 (F)
-  Set backlink of C to node 5 (F)
+  Set backlink of J to 1 (F)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F C C J 
+BC  Found bi component: F C J C 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 ================================================
@@ -817,11 +803,10 @@ Depth First Index of B is 7
 Depth First Index of A is 8
 Depth First Index of E is 9
 Depth First Index of I is 10
-  Set backlink of I to node 5 (F)
+  Set backlink of I to 6 (F)
   Found a leaf: I
-  Set backlink of E to node 5 (F)
+  Set backlink of E to 6 (F)
 Depth First Index of H is 11
-  Set backlink of H to node 0 (A)
   Found a leaf: H
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -833,7 +818,7 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 BC  Found bi component: A H 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of A to node 5 (F)
+  Set backlink of A to 6 (F)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: F
@@ -841,10 +826,10 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F B B A E E I 
+BC  Found bi component: F B A E I E A B 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of F to node 9 (J)
+  Set backlink of F to 4 (J)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: J
@@ -852,14 +837,14 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: J C C F 
+BC  Found bi component: J C F C 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of J to node 6 (G)
-  Set backlink of K to node 6 (G)
+  Set backlink of J to 1 (G)
+  Set backlink of K to 1 (G)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: G D D K K J 
+BC  Found bi component: G D K J K D 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 ================================================
@@ -875,9 +860,9 @@ Depth First Index of J is 8
 Depth First Index of G is 9
 Depth First Index of D is 10
 Depth First Index of K is 11
-  Set backlink of K to node 9 (J)
+  Set backlink of K to 8 (J)
   Found a leaf: K
-  Set backlink of D to node 9 (J)
+  Set backlink of D to 8 (J)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: J
@@ -885,10 +870,10 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: J G G D D K 
+BC  Found bi component: J G D K D G 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of J to node 5 (F)
+  Set backlink of J to 6 (F)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: F
@@ -896,12 +881,12 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F C C J 
+BC  Found bi component: F C J C 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of F to node 1 (B)
-  Set backlink of I to node 1 (B)
-  Set backlink of E to node 0 (A)
+  Set backlink of F to 3 (B)
+  Set backlink of I to 3 (B)
+  Set backlink of E to 2 (A)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: A
@@ -909,7 +894,7 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: A B B E E I I F 
+BC  Found bi component: A B E I F I E B 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -929,9 +914,9 @@ Depth First Index of J is 7
 Depth First Index of G is 8
 Depth First Index of D is 9
 Depth First Index of K is 10
-  Set backlink of K to node 9 (J)
+  Set backlink of K to 7 (J)
   Found a leaf: K
-  Set backlink of D to node 9 (J)
+  Set backlink of D to 7 (J)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: J
@@ -939,10 +924,10 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: J G G D D K 
+BC  Found bi component: J G D K D G 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of J to node 5 (F)
+  Set backlink of J to 5 (F)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: F
@@ -950,13 +935,12 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F C C J 
+BC  Found bi component: F C J C 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of F to node 8 (I)
-  Set backlink of B to node 8 (I)
+  Set backlink of F to 1 (I)
+  Set backlink of B to 1 (I)
 Depth First Index of H is 11
-  Set backlink of H to node 0 (A)
   Found a leaf: H
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -968,10 +952,10 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 BC  Found bi component: A H 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of A to node 8 (I)
+  Set backlink of A to 1 (I)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: I E E A B B F 
+BC  Found bi component: I E A B F B A E 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 ================================================
@@ -983,11 +967,10 @@ Depth First Index of B is 4
 Depth First Index of A is 5
 Depth First Index of E is 6
 Depth First Index of I is 7
-  Set backlink of I to node 5 (F)
+  Set backlink of I to 3 (F)
   Found a leaf: I
-  Set backlink of E to node 5 (F)
+  Set backlink of E to 3 (F)
 Depth First Index of H is 8
-  Set backlink of H to node 0 (A)
   Found a leaf: H
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -999,7 +982,7 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 BC  Found bi component: A H 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of A to node 5 (F)
+  Set backlink of A to 3 (F)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: F
@@ -1007,10 +990,10 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F B B A E E I 
+BC  Found bi component: F B A E I E A B 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of F to node 9 (J)
+  Set backlink of F to 1 (J)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point @ ROOT: J
@@ -1018,19 +1001,18 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: J C C F 
+BC  Found bi component: J C F C 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of G is 9
 Depth First Index of D is 10
 Depth First Index of K is 11
-  Set backlink of K to node 9 (J)
+  Set backlink of K to 1 (J)
   Found a leaf: K
-  Set backlink of D to node 9 (J)
-  Set backlink of G to node 9 (J)
+  Set backlink of D to 1 (J)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: J G G D D K 
+BC  Found bi component: J G D K D G 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 ================================================
@@ -1045,11 +1027,10 @@ Depth First Index of B is 7
 Depth First Index of A is 8
 Depth First Index of E is 9
 Depth First Index of I is 10
-  Set backlink of I to node 5 (F)
+  Set backlink of I to 6 (F)
   Found a leaf: I
-  Set backlink of E to node 5 (F)
+  Set backlink of E to 6 (F)
 Depth First Index of H is 11
-  Set backlink of H to node 0 (A)
   Found a leaf: H
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -1061,7 +1042,7 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 BC  Found bi component: A H 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of A to node 5 (F)
+  Set backlink of A to 6 (F)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: F
@@ -1069,10 +1050,10 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F B B A E E I 
+BC  Found bi component: F B A E I E A B 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of F to node 9 (J)
+  Set backlink of F to 4 (J)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: J
@@ -1080,14 +1061,14 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: J C C F 
+BC  Found bi component: J C F C 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of J to node 10 (K)
-  Set backlink of G to node 10 (K)
+  Set backlink of J to 1 (K)
+  Set backlink of G to 1 (K)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: K D D G G J 
+BC  Found bi component: K D G J G D 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -1103,9 +1084,9 @@ Depth First Index of F is 3
 Depth First Index of E is 4
 Depth First Index of I is 5
 Depth First Index of J is 6
-  Set backlink of J to node 5 (F)
+  Set backlink of J to 3 (F)
   Found a leaf: J
-  Set backlink of I to node 5 (F)
+  Set backlink of I to 3 (F)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: F
@@ -1113,14 +1094,14 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F E E I I J 
+BC  Found bi component: F E I J I E 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of G is 7
 Depth First Index of C is 8
 Depth First Index of D is 9
 Depth First Index of H is 10
-  Set backlink of H to node 2 (C)
+  Set backlink of H to 8 (C)
   Found a leaf: H
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -1129,7 +1110,7 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: C D D H 
+BC  Found bi component: C D H D 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -1143,12 +1124,11 @@ BC  Found bi component: G C
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of K is 11
-  Set backlink of K to node 5 (F)
+  Set backlink of K to 3 (F)
   Found a leaf: K
-  Set backlink of G to node 5 (F)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F G G K 
+BC  Found bi component: F G K G 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -1185,9 +1165,9 @@ Depth First Index of F is 3
 Depth First Index of E is 4
 Depth First Index of I is 5
 Depth First Index of J is 6
-  Set backlink of J to node 5 (F)
+  Set backlink of J to 3 (F)
   Found a leaf: J
-  Set backlink of I to node 5 (F)
+  Set backlink of I to 3 (F)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: F
@@ -1195,14 +1175,14 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F E E I I J 
+BC  Found bi component: F E I J I E 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of G is 7
 Depth First Index of C is 8
 Depth First Index of D is 9
 Depth First Index of H is 10
-  Set backlink of H to node 2 (C)
+  Set backlink of H to 8 (C)
   Found a leaf: H
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -1211,7 +1191,7 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: C D D H 
+BC  Found bi component: C D H D 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -1225,15 +1205,13 @@ BC  Found bi component: G C
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of K is 11
-  Set backlink of K to node 5 (F)
+  Set backlink of K to 3 (F)
   Found a leaf: K
-  Set backlink of G to node 5 (F)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F G G K 
+BC  Found bi component: F G K G 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of F to node 1 (B)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 BC  Found bi component: B F 
@@ -1244,7 +1222,7 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 Depth First Index of C is 1
 Depth First Index of D is 2
 Depth First Index of H is 3
-  Set backlink of H to node 2 (C)
+  Set backlink of H to 1 (C)
   Found a leaf: H
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -1253,7 +1231,7 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: C D D H 
+BC  Found bi component: C D H D 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of G is 4
@@ -1284,17 +1262,16 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 Depth First Index of E is 8
 Depth First Index of I is 9
 Depth First Index of J is 10
-  Set backlink of J to node 5 (F)
+  Set backlink of J to 5 (F)
   Found a leaf: J
-  Set backlink of I to node 5 (F)
-  Set backlink of E to node 5 (F)
+  Set backlink of I to 5 (F)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F E E I I J 
+BC  Found bi component: F E I J I E 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of K is 11
-  Set backlink of K to node 6 (G)
+  Set backlink of K to 4 (G)
   Found a leaf: K
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -1303,10 +1280,9 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: G F F K 
+BC  Found bi component: G F K F 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of G to node 2 (C)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 BC  Found bi component: C G 
@@ -1344,17 +1320,16 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 Depth First Index of E is 7
 Depth First Index of I is 8
 Depth First Index of J is 9
-  Set backlink of J to node 5 (F)
+  Set backlink of J to 4 (F)
   Found a leaf: J
-  Set backlink of I to node 5 (F)
-  Set backlink of E to node 5 (F)
+  Set backlink of I to 4 (F)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F E E I I J 
+BC  Found bi component: F E I J I E 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of K is 10
-  Set backlink of K to node 6 (G)
+  Set backlink of K to 3 (G)
   Found a leaf: K
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -1363,7 +1338,7 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: G F F K 
+BC  Found bi component: G F K F 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -1377,11 +1352,11 @@ BC  Found bi component: C G
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of H is 11
-  Set backlink of H to node 3 (D)
+  Set backlink of H to 1 (D)
   Found a leaf: H
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: D C C H 
+BC  Found bi component: D C H C 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 ================================================
@@ -1415,7 +1390,7 @@ Depth First Index of G is 5
 Depth First Index of C is 6
 Depth First Index of D is 7
 Depth First Index of H is 8
-  Set backlink of H to node 2 (C)
+  Set backlink of H to 6 (C)
   Found a leaf: H
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -1424,7 +1399,7 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: C D D H 
+BC  Found bi component: C D H D 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -1438,22 +1413,21 @@ BC  Found bi component: G C
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of K is 9
-  Set backlink of K to node 5 (F)
+  Set backlink of K to 2 (F)
   Found a leaf: K
-  Set backlink of G to node 5 (F)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F G G K 
+BC  Found bi component: F G K G 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of I is 10
 Depth First Index of J is 11
-  Set backlink of J to node 4 (E)
+  Set backlink of J to 1 (E)
   Found a leaf: J
-  Set backlink of I to node 4 (E)
+  Set backlink of I to 1 (E)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: E F F I I J 
+BC  Found bi component: E F I J I F 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 ================================================
@@ -1485,20 +1459,19 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 Depth First Index of E is 4
 Depth First Index of I is 5
 Depth First Index of J is 6
-  Set backlink of J to node 5 (F)
+  Set backlink of J to 1 (F)
   Found a leaf: J
-  Set backlink of I to node 5 (F)
-  Set backlink of E to node 5 (F)
+  Set backlink of I to 1 (F)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F E E I I J 
+BC  Found bi component: F E I J I E 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of G is 7
 Depth First Index of C is 8
 Depth First Index of D is 9
 Depth First Index of H is 10
-  Set backlink of H to node 2 (C)
+  Set backlink of H to 8 (C)
   Found a leaf: H
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -1507,7 +1480,7 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: C D D H 
+BC  Found bi component: C D H D 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -1521,12 +1494,11 @@ BC  Found bi component: G C
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of K is 11
-  Set backlink of K to node 5 (F)
+  Set backlink of K to 1 (F)
   Found a leaf: K
-  Set backlink of G to node 5 (F)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F G G K 
+BC  Found bi component: F G K G 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 ================================================
@@ -1535,7 +1507,7 @@ Depth First Index of G is 1
 Depth First Index of C is 2
 Depth First Index of D is 3
 Depth First Index of H is 4
-  Set backlink of H to node 2 (C)
+  Set backlink of H to 2 (C)
   Found a leaf: H
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -1544,7 +1516,7 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: C D D H 
+BC  Found bi component: C D H D 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -1584,22 +1556,20 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 Depth First Index of E is 8
 Depth First Index of I is 9
 Depth First Index of J is 10
-  Set backlink of J to node 5 (F)
+  Set backlink of J to 5 (F)
   Found a leaf: J
-  Set backlink of I to node 5 (F)
-  Set backlink of E to node 5 (F)
+  Set backlink of I to 5 (F)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F E E I I J 
+BC  Found bi component: F E I J I E 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of K is 11
-  Set backlink of K to node 6 (G)
+  Set backlink of K to 1 (G)
   Found a leaf: K
-  Set backlink of F to node 6 (G)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: G F F K 
+BC  Found bi component: G F K F 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 ================================================
@@ -1607,7 +1577,7 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 Depth First Index of H is 1
 Depth First Index of C is 2
 Depth First Index of D is 3
-  Set backlink of D to node 7 (H)
+  Set backlink of D to 1 (H)
   Found a leaf: D
 Depth First Index of G is 4
 Depth First Index of F is 5
@@ -1621,7 +1591,7 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: B A C D 
+BC  Found bi component: B A 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -1637,17 +1607,16 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 Depth First Index of E is 8
 Depth First Index of I is 9
 Depth First Index of J is 10
-  Set backlink of J to node 5 (F)
+  Set backlink of J to 5 (F)
   Found a leaf: J
-  Set backlink of I to node 5 (F)
-  Set backlink of E to node 5 (F)
+  Set backlink of I to 5 (F)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F E E I I J 
+BC  Found bi component: F E I J I E 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of K is 11
-  Set backlink of K to node 6 (G)
+  Set backlink of K to 4 (G)
   Found a leaf: K
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -1656,10 +1625,9 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: G F F K 
+BC  Found bi component: G F K F 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of G to node 2 (C)
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 AP  Found Articulation Point: C
@@ -1672,7 +1640,7 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: H C 
+BC  Found bi component: H C D C 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 ================================================
@@ -1707,7 +1675,7 @@ Depth First Index of G is 6
 Depth First Index of C is 7
 Depth First Index of D is 8
 Depth First Index of H is 9
-  Set backlink of H to node 2 (C)
+  Set backlink of H to 7 (C)
   Found a leaf: H
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -1716,7 +1684,7 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: C D D H 
+BC  Found bi component: C D H D 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -1730,21 +1698,20 @@ BC  Found bi component: G C
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of K is 10
-  Set backlink of K to node 5 (F)
+  Set backlink of K to 3 (F)
   Found a leaf: K
-  Set backlink of G to node 5 (F)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F G G K 
+BC  Found bi component: F G K G 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of J is 11
-  Set backlink of J to node 8 (I)
+  Set backlink of J to 1 (I)
   Found a leaf: J
-  Set backlink of F to node 8 (I)
+  Set backlink of F to 1 (I)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: I E E F F J 
+BC  Found bi component: I E F J F E 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 ================================================
@@ -1779,7 +1746,7 @@ Depth First Index of G is 6
 Depth First Index of C is 7
 Depth First Index of D is 8
 Depth First Index of H is 9
-  Set backlink of H to node 2 (C)
+  Set backlink of H to 7 (C)
   Found a leaf: H
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -1788,7 +1755,7 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: C D D H 
+BC  Found bi component: C D H D 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -1802,21 +1769,20 @@ BC  Found bi component: G C
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of K is 10
-  Set backlink of K to node 5 (F)
+  Set backlink of K to 3 (F)
   Found a leaf: K
-  Set backlink of G to node 5 (F)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F G G K 
+BC  Found bi component: F G K G 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of I is 11
-  Set backlink of I to node 9 (J)
+  Set backlink of I to 1 (J)
   Found a leaf: I
-  Set backlink of F to node 9 (J)
+  Set backlink of F to 1 (J)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: J E E F F I 
+BC  Found bi component: J E F I F E 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 ================================================
@@ -1849,20 +1815,19 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 Depth First Index of E is 5
 Depth First Index of I is 6
 Depth First Index of J is 7
-  Set backlink of J to node 5 (F)
+  Set backlink of J to 2 (F)
   Found a leaf: J
-  Set backlink of I to node 5 (F)
-  Set backlink of E to node 5 (F)
+  Set backlink of I to 2 (F)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: F E E I I J 
+BC  Found bi component: F E I J I E 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 Depth First Index of G is 8
 Depth First Index of C is 9
 Depth First Index of D is 10
 Depth First Index of H is 11
-  Set backlink of H to node 2 (C)
+  Set backlink of H to 9 (C)
   Found a leaf: H
 
 APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
@@ -1871,7 +1836,7 @@ APAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAPAP
 
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: C D D H 
+BC  Found bi component: C D H D 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 
@@ -1884,9 +1849,9 @@ BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 BC  Found bi component: G C 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
-  Set backlink of G to node 10 (K)
+  Set backlink of G to 1 (K)
 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
-BC  Found bi component: K F F G 
+BC  Found bi component: K F G F 
 BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 

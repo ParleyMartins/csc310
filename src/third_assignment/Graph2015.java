@@ -119,22 +119,26 @@ public class Graph2015 {
 
 		biconnectedComponents.add(nodeId);
 		for (int nextNode : nodes[nodeId].getEdges()) {
-			if (nodes[nextNode].time < nodes[backlink].time)
-				backlink = nextNode;
 			if (nodes[nextNode].color == Color.WHITE) {
 				whiteNodes++;
 				nodes[nextNode].parent = nodeId;
+
 				int backreturn = depthFirstSearch(nextNode);
+				biconnectedComponents.add(nodeId);
 				checkAP(nodeId, backreturn);
+
 				if (nodes[backreturn].time < nodes[backlink].time) {
 					backlink = backreturn;
 				}
-			}
+			} else if (nodes[nextNode].time < nodes[backlink].time)
+				backlink = nextNode;
+
 		}
 
 		printBacklink(nodeId, backlink);
 		checkAndPrintLeaf(whiteNodes, nodeId);
 		nodes[nodeId].color = Color.BLACK;
+
 		return backlink;
 	}
 
@@ -279,7 +283,7 @@ public class Graph2015 {
 		 * do that because it's less complexity than peeking and polling every
 		 * time.
 		 */
-		out.print(nodes[index].getLabel() + " ");
+//		out.print(nodes[index].getLabel() + " ");
 		biconnectedComponents.addLast(index);
 		out.println();
 		out.println("BCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC");

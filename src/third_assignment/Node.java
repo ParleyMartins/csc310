@@ -108,6 +108,7 @@ public class Node {
 		color = Color.WHITE;
 		time = Integer.MAX_VALUE;
 		setArticulationPoint(false);
+		parent = -1;
 	}
 	
 	/**
